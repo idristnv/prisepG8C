@@ -1,2 +1,2 @@
 # prisepG8C
-slt a tous les amis
+la c'est chiant giithtubeeeee
