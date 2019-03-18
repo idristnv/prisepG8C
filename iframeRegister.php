@@ -22,7 +22,7 @@
     <input class="w3-input   w3-hover-grey"  style="width: 180px" type="Date" min="1900-12-31" max="2000-12-31"">
 
     <label>Mot de passe</label>
-    <input class="w3-input w3-animate-input  w3-hover-grey" style="width:50%" type="text">
+    <input class="w3-input w3-animate-input  w3-hover-grey" style="width:50%" type="password">
     <p><a href="gcu.html" style="color: blue;">Conditions générales d'utilisation</a></p>
     <input type="checkbox" name=checkboxGcu>j'ai lu et j'accepte les conditions générales d'utilisation<br>
     </br>
