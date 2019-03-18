@@ -1,0 +1,45 @@
+body{
+  background-image: url(image/.);
+  background: radial-gradient(farthest-side circle at center,white,blue);
+}
+h1{
+  width: 90%;
+  text-align:center;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 7vw;
+
+  border-radius: 20px 60px 20px 60px;
+  background-color: orange;
+  color: #3c62fc;
+  /*background-image: linear-gradient(to left top ,orange,blue) ;*/
+  text-shadow: gold 3px 3px ;
+  box-shadow: grey 5px 6px 4px;
+
+}
+
+h2{
+  width: 50%;
+  text-align: center;
+  margin-bottom: 5px;
+
+
+  font-size: 5vw;
+  color: orange;
+}
+iframe{
+  width: 40%;
+  border-radius: 15px;
+  border-color: orange;
+  margin-left: 5%;
+  margin-right:5%;
+
+}
+.doubleContainer{
+  display: flex;
+}
+#logoPrisep{
+  float: left;
+  padding-left: 0px;
+  width:13vw;
+}
