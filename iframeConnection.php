@@ -15,7 +15,7 @@
     <label>Mot de passe</label>
     <input class="w3-input w3-animate-input  w3-hover-grey" style="width:50%" type="text">
     <br>
-    <p><a href="">mot de passe oublié?</a></p>
+    <p><a href="">Mot de passe oublié?</a></p>
     <br>
     <button class="w3-btn w3-blue">Se connecter</button>
   </form>
