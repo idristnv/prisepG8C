@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +9,8 @@
   <title>Document</title>
 </head>
 <body>
-  <?php include("barre de navigation.html"); ?>
+  <?php include("barre de navigation.html");
+  ?>
 
 
 </body>

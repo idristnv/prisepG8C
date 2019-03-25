@@ -1,3 +1,9 @@
+<?php
+session_start();
+$_SESSION['prenom'] = 'Jean';
+$_SESSION['age'] = 24;
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
