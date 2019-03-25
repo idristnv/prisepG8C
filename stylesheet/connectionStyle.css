@@ -1,6 +1,6 @@
 body{
   background-image: url(image/.);
-  background: linear-gradient(rgb(85, 85, 90),rgb(140, 143, 143));
+  background: linear-gradient(blue,white);
 }
 h1{
   width: 90%;
@@ -15,15 +15,13 @@ h1{
   background: linear-gradient(to right,rgb(253, 101, 0), rgb(253, 135, 0), rgb(255, 153, 0));
   color: #3c62fc;
   /*background-image: linear-gradient(to left top ,orange,blue) ;*/
-  text-shadow: gold 3px 3px ;
+  text-shadow: white 2px 2px ;
 
 }
 
 h2{
-  width: 50%;
   text-align: center;
-  margin-bottom: 5px;
-  margin-top: 0px;
+  padding-bottom: 0px;
   font-size: 3vw;
   font-family: "roboto", Arial;
   font-weight: 500;
@@ -39,11 +37,67 @@ iframe{
   margin-right:5%;
 
 }
-.doubleContainer{
-  display: flex;
-}
+
 #logoPrisep{
   float: left;
   padding-left: 0px;
   width:13vw;
 }
+#divOfConnectionAndRegistration{
+  display: flex;
+  flex-direction: row;
+}
+.divOfConnectionMode{
+  width: 40%;
+  margin:2%;
+  padding:3%;
+  padding-top:0px;
+
+  border: solid orange;
+  border-radius: 3vw ;
+  background-color: white;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  margin: 1px;
+}
+label{
+  font-size: 1.2em;
+}
+input{
+  padding: 4px 10px;
+  margin: 3px ;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  border:none;
+  border-bottom: 1px dotted grey;
+}
+input:focus {
+  border: 2px solid #555;
+}
+input[type=Date]{
+  padding: 4px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 1.5em;
+  border:none;
+}
+button{
+  font-size: 1.5em;
+  width: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  #divOfConnectionAndRegistration{
+  display: flex;
+  flex-direction: column;
+  }
+  .divOfConnectionMode{
+    width: 90%;
+  }
+  button{
+    width: 100%;
+  }
+}
+
