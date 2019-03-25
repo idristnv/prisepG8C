@@ -1,7 +1,6 @@
 <?php
-session_start();
-$_SESSION['prenom'] = 'Jean';
-$_SESSION['age'] = 24;
+session_start(); // On démarre la session AVANT toute chose
+
 ?>
 
 <!DOCTYPE html>
