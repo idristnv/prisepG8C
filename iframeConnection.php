@@ -1,3 +1,7 @@
+<?php
+session_start(); // On démarre la session AVANT toute chose
+?>
+
 <!DOCTYPE html>
 <html>
 <!-- https://www.w3schools.com/w3css/w3css_input.asp -->
@@ -18,6 +22,8 @@
     <p><a href="">Mot de passe oublié?</a></p>
     <br>
     <button class="w3-btn w3-blue">Se connecter</button>
+
+
   </form>
 </body>
 </html>
