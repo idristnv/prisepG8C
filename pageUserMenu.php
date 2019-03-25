@@ -1,8 +1,8 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
-$_SESSION['prenom'] = htmlspecialchars($_POST['prenom']); //le htmlspecialchars empeche les balise html de s'activé par ex: <script>
+$_SESSION['prenom'] = htmlspecialchars($_POST['prenom']); //le htmlspecialchars empeche les balises html de s'activé par ex: <script>
 setcookie('prenom',$_POST['prenom'],time() + 365*24*3600, null, null, false, true);//le dernier true est pour pas que le cookies soit recuperable par du javascript, en version simple:<?php setcookie('prenom', 'myko', time() + 365*24*3600);
-setcookie('password',$_POST['motDePasse'],time() + 365*24*3600, null, null, false, true);
+setcookie('password',$_POST['postPassword'],time() + 365*24*3600, null, null, false, true);
 
 ?>
 

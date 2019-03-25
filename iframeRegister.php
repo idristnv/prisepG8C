@@ -1,5 +1,6 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
+
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +29,7 @@ session_start(); // On démarre la session AVANT toute chose
     <input class="w3-input   w3-hover-grey"  style="width: 180px" type="Date" min="1900-12-31" max="2000-12-31" name="dateDeNaissance">
 
     <label>Mot de passe</label>
-    <input class="w3-input w3-animate-input  w3-hover-grey" style="width:50%" type="password" name="motDePasse">
+    <input class="w3-input w3-animate-input  w3-hover-grey" style="width:50%" type="password" name="postPassword">
 
     <p><a href="gcu.html" style="color: blue;">Conditions générales d'utilisation</a></p>
     <input type="checkbox" name=checkboxGcu>   J'ai lu et j'accepte les conditions générales d'utilisation.<br>
