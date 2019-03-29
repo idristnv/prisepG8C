@@ -19,14 +19,14 @@ session_start();
       <form action="pageUserMenu.php" method="post">
         <label>Adresse mail:</label>
         <br>
-        <input type="Email" name="Email">
+        <input type="Email" name="inputEmail">
         <br>
         <label>Mot de passe:</label>
         <br>
-        <input type="password" name="password">
+        <input type="password" name="inputPassword">
         <br>
         <p><a href="pagePasswordForgotten.php">Mot de passe oublié?</a></p>
-        <sub type="button" onclick="alert('vous allez vous connecter')">Se connecter</button>
+        <input type="submit" value="Se connecter">
 
       </form>
     </div>
@@ -34,16 +34,16 @@ session_start();
       <h2>S'inscrire</h2>
       <form action="pageUserMenu.php" method="post">
         <label>Nom</label>
-        <input type="text" name="nom">
+        <input type="text" name="inputNom">
 
         <label>Prénom</label>
-        <input type="text" name="prenom" >
+        <input type="text" name="inputPrenom" >
 
         <label>Adresse mail</label>
         <input type="Email" name="inputEmail">
 
         <div><label>Date de naissance:</label>
-        <input style="width: 200px" type="Date" min="1900-12-31" max="2000-12-31" name="dateDeNaissance">
+        <input style="width: 200px" type="Date" min="1900-12-31" max="2000-12-31" name="inputDateDeNaissance">
         </div>
         <label>Mot de passe</label>
         <input type="password" name="inputPassword">
@@ -52,7 +52,7 @@ session_start();
 
         <input type="checkbox" name=checkboxGcu>   J'ai lu et j'accepte les conditions générales d'utilisation.</div>
         </br>
-        <input type="submit" name=""> type="Button" onclick="alert('vous êtes inscris')">Confirmer l'inscription</button>
+        <input type="submit" onclick="alert('Vous etes inscris')" name="" value="Confirmer l'inscription">
 
       </form>
 

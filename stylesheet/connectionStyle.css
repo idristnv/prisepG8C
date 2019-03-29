@@ -83,10 +83,6 @@ input[type=Date]{
   font-size: 1.5em;
   border:none;
 }
-button{
-  font-size: 1.5em;
-  width: 50%;
-}
 
 @media screen and (max-width: 700px) {
   #divOfConnectionAndRegistration{
