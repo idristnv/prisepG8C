@@ -20,6 +20,7 @@ if (!isset($_COOKIE['password'])) {
 
   <?php include("barre de navigation.html");
   ?>
+
   <p>methode session: salut <?php echo $_SESSION['prenom'];?> </p>
   <?php
     if (isset($_COOKIE['email'])) {
@@ -28,8 +29,48 @@ if (!isset($_COOKIE['password'])) {
     if (isset($_COOKIE['password'])) {
       echo '<p>ton mot de passe est '.$_COOKIE['password'].'</p>';
     }
-   ?>
+  ?>
+  <br><br>
+  <?php
+    try{
+      $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));//les derniers sont d'id de phpMyAdmin et le mot de passe et l'array c'est pour montrer les erreurs plus clairement, PDO est une extension de PHP
+    }catch (Exception $e){
+      die('error:'.$e->getMessage());
+    }
 
+    $reponse = $bdd->query('SELECT nom,console,prix FROM jeux_video WHERE possesseur=\'Patrick\' ORDER BY prix DESC LIMIT 4,4' );
+    /* 'SELECT Champs From table' $reponse contient toute la reponse MySQL sous forme d'objet.
+    *WHERE possesseur="Patrick" on regarder seulement quand le champs posseur vaut Patrick
+    *ORDER BY prix DESC on regarde dans l'ordre decroissant (par defaut c'est croissant et si c'est des lettre alors alphabetiquement)
+    *LIMIT 4,4 recupere de la 4eme ligne a la 8huitieme
+    */
+
+    $i=1;
+    echo '<H1>Patoche a acheté les jeux suivant:</H1>';
+    while ( $donnee = $reponse->fetch()) {//donnee est un array renvoyé par le fetch, chaque fois qu'on boucle, fetch va chercher dans $reponse l'entree suivante et organise les champs dans l'array $donnee,fetch renvoie faux dans données lorsqu'il est arrivé à la fin des données
+
+    if ($i==1){
+      print_r( $donnee);
+    }
+  ?>
+    <p> <?php echo $i ?>) "<?php echo $donnee['nom'] ?>" sur <?php echo $donnee['console'] ?> à<?php echo $donnee['prix'] ?> euros</p>
+
+  <?php
+    $i++;
+    }
+    $reponse->closeCursor();//!!!on termine le traitement de la requete, ça permet d'eviter des erreurs a la requette suivante
+  ?>
+
+  <H1>les 3 jeux les plus chere (mais a moins de <?php echo $_GET['prixMax'] ?> euros) sur <?php echo $_GET['console'] ?> sont :</H1>
+  <?php
+    $req = $bdd->prepare('SELECT nom,console,prix from jeux_video where console=:nomConsole AND prix<:prixMax ORDER BY prix DESC LIMIT 0,3');
+    $req->execute(array('nomConsole'=>$_GET['console'],'prixMax'=>$_GET['prixMax']));
+
+    while ($donnee = $req->fetch()) {
+      echo '<p>'.$donnee['prix'].'euros : '.$donnee['nom'].'</p>';
+    }
+    $req->closeCursor();
+   ?>
 
 
 

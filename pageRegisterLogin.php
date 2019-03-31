@@ -2,6 +2,7 @@
 session_start();
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,8 +72,8 @@ session_start();
   </footer>
 </body>
 
-<script type="text/javascript"> //trouver a quoi sert le type et le truc en dessous
-  //<![CDATA]
+<script type="text/javascript"> //regarder a quoi sert le type
+  //<![CDATA] //a quoi sa pourrait servir
 
   function validateRegistration(){
     //si la valeur du mot de passe est non vide
@@ -84,6 +85,7 @@ session_start();
       return false;
     }
   }
+  //]]>
 
 </script>
 
