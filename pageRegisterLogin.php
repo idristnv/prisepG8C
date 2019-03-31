@@ -32,7 +32,7 @@ session_start();
     </div>
     <div class="divOfConnectionMode">
       <h2>S'inscrire</h2>
-      <form action="pageUserMenu.php" method="post">
+      <form name="formRegistration" action="pageUserMenu.php" method="post" onsubmit="return validateRegistration()" >
         <label>Nom</label>
         <input type="text" name="inputNom">
 
@@ -70,4 +70,21 @@ session_start();
 
   </footer>
 </body>
+
+<script type="text/javascript"> //trouver a quoi sert le type et le truc en dessous
+  //<![CDATA]
+
+  function validateRegistration(){
+    //si la valeur du mot de passe est non vide
+    if (document.formRegistration.inputPassword.value !="") {
+      return true;
+    }
+    else{
+      alert("Il semblerait que vous avez oublié de saisir un mot de passe...");
+      return false;
+    }
+  }
+
+</script>
+
 </html>
