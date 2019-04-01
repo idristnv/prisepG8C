@@ -14,12 +14,30 @@ if (!isset($_COOKIE['password'])) {
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Menu</title>
 </head>
 <body>
 
   <?php include("barre de navigation.html");
   ?>
+  <div id="divAlert">
+    <h2>Alertes</h2>
+    <div>
+      <h3>Consommation:</h3>
+      <iframe src="iframeConsomationAlert.php" height="500 px"></iframe>
+    </div>
+
+    <div>
+      <h3>Temperature:</h3>
+      <iframe src="iframeTemperatureAlert.php" height="500 px"></iframe>
+    </div>
+
+  </div>
+    <h2>Vos demeures:</h2>
+    <iframe src="iframeMaison.php" height="500 px"></iframe>
+  <div>
+
+  </div>
 
   <p>methode session: salut <?php echo $_SESSION['prenom'];?> </p>
   <?php
