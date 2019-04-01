@@ -8,6 +8,7 @@ if (!isset($_COOKIE['email'])) {
 if (!isset($_COOKIE['password'])) {
   setcookie('password',$_POST['inputPassword'],time() + 365*24*3600, null, null, false, true);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -18,25 +19,24 @@ if (!isset($_COOKIE['password'])) {
 </head>
 <body>
 
-  <?php include("barre de navigation.html");
-  ?>
+  <?php include("barre de navigation.html");?>
+
   <div id="divAlert">
     <h2>Alertes</h2>
     <div>
       <h3>Consommation:</h3>
-      <iframe src="iframeConsomationAlert.php" height="500 px"></iframe>
+      <iframe src="iframeConsomationAlert.php" height="200 px"></iframe>
     </div>
 
     <div>
       <h3>Temperature:</h3>
-      <iframe src="iframeTemperatureAlert.php" height="500 px"></iframe>
+      <iframe src="iframeTemperatureAlert.php" height="200 px"></iframe>
     </div>
-
   </div>
+
+  <div>
     <h2>Vos demeures:</h2>
     <iframe src="iframeMaison.php" height="500 px"></iframe>
-  <div>
-
   </div>
 
   <p>methode session: salut <?php echo $_SESSION['prenom'];?> </p>
