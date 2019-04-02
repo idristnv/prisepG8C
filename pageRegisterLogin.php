@@ -73,9 +73,30 @@ session_start();
 </body>
 
 <script type="text/javascript"> //regarder a quoi sert le type
-  //<![CDATA] //a quoi sa pourrait servir
+  //<![CDATA] //a quoi ça pourrait servir
 
   function validateRegistration(){
+
+
+    return <?php
+    try{
+      $dejaInscrit=false;
+      $bddAPP = new PDO('mysql:host=localhost;dbname=APP;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+      $req = $bdd->query('SELECT adresseMail from Utilisateur');
+      while ($donnee = $req->fetch()) {
+        if ($donnee['AdresseMail']!=$_POST['inputEmail']){
+          $dejaInscrit=true;
+        }
+      }
+      echo $dejaInscrit;
+
+
+    }catch (Exception $e){
+      die('error:'.$e->getMessage());
+    }
+    ?> ;
+
+
     //si la valeur du mot de passe est non vide
     if (document.formRegistration.inputPassword.value !="") {
       return true;
