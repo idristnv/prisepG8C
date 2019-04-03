@@ -17,14 +17,14 @@ session_start();
   <div id="divOfConnectionAndRegistration">
     <div class="divOfConnectionMode" style="height: 400px;">
       <h2>Connectez-vous</h2>
-      <form action="pageUserMenu.php" method="post">
+      <form action="pageLogin_validation.php" method="post">
         <label>Adresse mail:</label>
         <br>
-        <input type="Email" name="inputEmail">
+        <input type="Email" name="inputEmailToConnect" >
         <br>
         <label>Mot de passe:</label>
         <br>
-        <input type="password" name="inputPassword">
+        <input type="password" name="inputMotDePasseToConnect">
         <br>
         <p><a href="pagePasswordForgotten.php">Mot de passe oublié?</a></p>
         <input type="submit" value="Se connecter">
@@ -33,7 +33,7 @@ session_start();
     </div>
     <div class="divOfConnectionMode">
       <h2>S'inscrire</h2>
-      <form name="formRegistration" action="pageUserMenu.php" method="post" onsubmit="return validateRegistration()" >
+      <form name="formRegistration" action="pageRegister_validation.php" method="post" onsubmit="return validateRegistration()" >
         <label>Nom</label>
         <input type="text" name="inputNom">
 
@@ -47,13 +47,13 @@ session_start();
         <input style="width: 200px" type="Date" min="1900-12-31" max="2000-12-31" name="inputDateDeNaissance">
         </div>
         <label>Mot de passe</label>
-        <input type="password" name="inputPassword">
+        <input type="password" name="inputMotDePasse">
 
         <div><p><a href="gcu.html" style="color: blue;">Conditions générales d'utilisation</a></p>
 
-        <input type="checkbox" name=checkboxGcu>   J'ai lu et j'accepte les conditions générales d'utilisation.</div>
+        <input type="checkbox" name=checkboxGcu>J'ai lu et j'accepte les conditions générales d'utilisation.</div>
         </br>
-        <input type="submit" onclick="alert('Vous etes inscris')" name="" value="Confirmer l'inscription">
+        <input type="submit" name="" value="Confirmer l'inscription">
 
       </form>
 
@@ -74,31 +74,10 @@ session_start();
 
 <script type="text/javascript"> //regarder a quoi sert le type
   //<![CDATA] //a quoi ça pourrait servir
-
   function validateRegistration(){
-
-
-    return <?php
-    try{
-      $dejaInscrit=false;
-      $bddAPP = new PDO('mysql:host=localhost;dbname=APP;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-      $req = $bdd->query('SELECT adresseMail from Utilisateur');
-      while ($donnee = $req->fetch()) {
-        if ($donnee['AdresseMail']!=$_POST['inputEmail']){
-          $dejaInscrit=true;
-        }
-      }
-      echo $dejaInscrit;
-
-
-    }catch (Exception $e){
-      die('error:'.$e->getMessage());
-    }
-    ?> ;
-
-
     //si la valeur du mot de passe est non vide
     if (document.formRegistration.inputPassword.value !="") {
+      alert('Vous pouvez vous connecter à present')
       return true;
     }
     else{

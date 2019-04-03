@@ -2,13 +2,6 @@
 session_start(); // On démarre la session AVANT toute chose
 $_SESSION['prenom'] = htmlspecialchars($_POST['inputPrenom']); //le htmlspecialchars empeche les balises html de s'activé par ex: <script>
 
-if (!isset($_COOKIE['email'])) {
-  setcookie('email',$_POST['inputEmail'],time() + 365*24*3600, null, null, false, true);//le dernier true est pour pas que le cookies soit recuperable par du javascript, en version simple:<?php setcookie('prenom', 'mykola', time() + 365*24*3600);
-}
-if (!isset($_COOKIE['password'])) {
-  setcookie('password',$_POST['inputPassword'],time() + 365*24*3600, null, null, false, true);
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +57,7 @@ if (!isset($_COOKIE['password'])) {
     */
 
     $i=1;
-    echo '<H1>Patoche a acheté les jeux suivant:</H1>';
+    echo '<H1>Patrick a acheté les jeux suivant:</H1>';
     while ( $donnee = $reponse->fetch()) {//donnee est un array renvoyé par le fetch, chaque fois qu'on boucle, fetch va chercher dans $reponse l'entree suivante et organise les champs dans l'array $donnee,fetch renvoie faux dans données lorsqu'il est arrivé à la fin des données
 
     if ($i==1){
