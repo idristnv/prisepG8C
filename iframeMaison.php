@@ -18,19 +18,19 @@ session_start();
 
     die('error:'.$e->getMessage());
   }
+  $requeteSQL = $bddAPP->query('SELECT nomResidence,adresse,nbPiece,adresseMail FROM maison');
 
-  $requeteSQL = $bddAPP->query('SELECT nomResidence,adresse,nombrePiece FROM Maison WHERE adresseMail=\''.$_SESSION['adresseMail'].'\'' );
-
-  while ( $donnee = $reponse->fetch()) {
-    print_r($donnee);
+  while ( $donnee = $requeteSQL->fetch() ){
+    if ( $donnee['adresseMail']==$_SESSION['adresseMail']){
   ?>
   <div class="divMaison" >
     <h4><?php echo $donnee['nomResidence'] ?></h4>
-    <p><?php echo $donnee['adresse'] ?></p>
-    <p><?php echo $donnee['nombrePiece'] ?></p>
+    <p>adresse: <?php echo $donnee['adresse'] ?></p>
+    <p><?php echo $donnee['nbPiece'] ?>pièces</p>
   </div>
 
   <?php
+    }
   }//fin de la boucle while
   $requeteSQL->closeCursor();
   ?>

@@ -1,7 +1,5 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
-$_SESSION['prenom'] = htmlspecialchars($_POST['inputPrenom']); //le htmlspecialchars empeche les balises html de s'activé par ex: <script>
-
 ?>
 
 <!DOCTYPE html>
