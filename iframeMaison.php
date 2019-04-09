@@ -8,7 +8,7 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <link rel="stylesheet" href="iframeMaison.css">
+  <link rel="stylesheet" href="stylesheet/iframeMaison.css">
 </head>
 <body>
   <?php
@@ -34,6 +34,8 @@ session_start();
   }//fin de la boucle while
   $requeteSQL->closeCursor();
   ?>
+  <a href="pageAddHome.php"><img src="stylesheet/ICON_PLUS.png" alt="ajouter une maison"></a>
+
 </body>
 
 
