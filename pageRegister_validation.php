@@ -24,7 +24,7 @@ try{
     $reqInsertion->closeCursor();
     }
 }catch(Exception $e){
-  die('Erreur : '.$e->getMessage());
+  die( 'Erreur : '.$e->getMessage() );
 }
 // Redirection du visiteur vers la page d'inscription
 header('Location: pageRegisterLogin.php');

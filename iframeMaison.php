@@ -8,7 +8,7 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="iframeMaison.css">
 </head>
 <body>
   <?php

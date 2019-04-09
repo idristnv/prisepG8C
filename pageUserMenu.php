@@ -27,7 +27,7 @@ session_start(); // On démarre la session AVANT toute chose
 
   <div>
     <h2>Vos demeures:</h2>
-    <iframe src="iframeMaison.php" height="500 px"></iframe>
+    <iframe src="iframeMaison.php" width="100%" height="600px"></iframe>
   </div>
 
   <p>methode session: salut <?php echo $_SESSION['prenom'];?> </p>
@@ -63,7 +63,6 @@ session_start(); // On démarre la session AVANT toute chose
     }
   ?>
     <p> <?php echo $i ?>) "<?php echo $donnee['nom'] ?>" sur <?php echo $donnee['console'] ?> à<?php echo $donnee['prix'] ?> euros</p>
-
   <?php
     $i++;
     }
