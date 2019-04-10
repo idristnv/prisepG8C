@@ -1,0 +1,36 @@
+* {
+font-family: Trebuchet MS;
+}
+
+
+#AffichageMaison
+{
+display: flex;
+margin-left:50px;
+margin-right: 50px;
+}
+
+.divMaison {
+width: 250px;
+height: 250px;
+border: 3px solid black;
+margin: 10px;
+background-color: #E8DBC8;
+border-radius: 40px; 
+padding: 0px;
+overflow: hidden;
+}
+
+div h2 {
+background-color: blue; 
+padding-top:10px;
+padding-bottom: 10px;
+margin-top:0px;
+text-align: center;
+font-family: Arial;  
+}
+
+.InfoMaison {
+padding: 10px;
+font-style: italic;
+}
