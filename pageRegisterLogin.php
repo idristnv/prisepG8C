@@ -8,7 +8,7 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <title>Prisep</title>
-  <link rel="stylesheet" href="stylesheet/connectionStyle.css">
+  <link rel="stylesheet" href="stylesheet/pageRegisterLogin.css">
 </head>
 <body>
   <p><img src="image/logoSite.png"  id="logoPrisep" alt="logo"></p>

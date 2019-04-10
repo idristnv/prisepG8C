@@ -7,13 +7,14 @@ session_start(); // On démarre la session AVANT toute chose
 <head>
   <meta charset="UTF-8">
   <title>Menu</title>
+  <link rel="stylesheet" href="stylesheet/pageUserMenu.css">
 </head>
 <body>
 
   <?php include("barre de navigation.html");?>
 
+  <h2>Alertes</h2>
   <div id="divAlert">
-    <h2>Alertes</h2>
     <div>
       <h3>Consommation:</h3>
       <iframe src="iframeConsomationAlert.php" height="200 px"></iframe>

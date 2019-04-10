@@ -1,6 +1,6 @@
 body{
   background-image: url(image/.);
-  background: linear-gradient(blue,white);
+  background: linear-gradient(#686f77,white);
 }
 h1{
   width: 90%;
@@ -12,8 +12,8 @@ h1{
   font-weight: 700;
 
   border-radius: 20px 60px 20px 60px;
-  background: linear-gradient(to right,rgb(253, 101, 0), rgb(253, 135, 0), rgb(255, 153, 0));
-  color: #3c62fc;
+  background: linear-gradient(to right,#406ca5,#1764c6);
+  color: #787b84;
   /*background-image: linear-gradient(to left top ,orange,blue) ;*/
   text-shadow: white 2px 2px ;
 
@@ -25,14 +25,14 @@ h2{
   font-size: 3vw;
   font-family: "roboto", Arial;
   font-weight: 500;
-  color: orange;
+  color: #3e4866;
 }
 
 
 iframe{
   width: 40%;
   border-radius: 15px;
-  border-color: orange;
+  border-color: #3e4866;
   margin-left: 5%;
   margin-right:5%;
 
@@ -52,8 +52,7 @@ iframe{
   margin:2%;
   padding:3%;
   padding-top:0px;
-
-  border: solid orange;
+  border: solid #3e4866;
   border-radius: 3vw ;
   background-color: white;
 }
