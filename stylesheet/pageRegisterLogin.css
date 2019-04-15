@@ -44,7 +44,7 @@ iframe{
   width:13vw;
 }
 #divOfConnectionAndRegistration{
-  display: flex;
+  display:flex;
   flex-direction: row;
 }
 .divOfConnectionMode{

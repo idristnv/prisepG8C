@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +10,7 @@ session_start();
   <link rel="stylesheet" href="stylesheet/pageRegisterLogin.css">
 </head>
 <body>
-  <p><img src="image/logoSite.png"  id="logoPrisep" alt="logo"></p>
+  <p><img src="styleSheet/image/logoSite.png"  id="logoPrisep" alt="logo"></p>
 
   <h1>Prisep</h1>
   <div id="divOfConnectionAndRegistration">
@@ -28,7 +27,6 @@ session_start();
         <br>
         <p><a href="pagePasswordForgotten.php">Mot de passe oublié?</a></p>
         <input type="submit" value="Se connecter">
-
       </form>
     </div>
     <div class="divOfConnectionMode">
@@ -67,7 +65,7 @@ session_start();
     <iframe src="iframeConnection.php" height="300 px" scrolling="no" style="margin-top: 100px"></iframe>
   </div> -->
 
-  <footer style="display:flex;">
+  <footer >
 
   </footer>
 </body>

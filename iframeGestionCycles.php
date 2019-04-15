@@ -17,7 +17,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="GestionCyclesStyle.css" />
+        <link rel="stylesheet" href="styleSheet/GestionCyclesStyle.css" />
 
         <title>Gestion des cycles</title>
     </head>
@@ -28,12 +28,12 @@
       <br/>
 
     <table>
-<br/> 
+<br/>
 <br/>
 
 
 <tr>
-<td width="20%"> <input type="checkbox" name="Lundi" > <label>Lundi </label> 
+<td width="20%"> <input type="checkbox" name="Lundi" > <label>Lundi </label>
 <br/> <br/><input type="checkbox" name="Mardi" > <label>Mardi </label>
 <br/> <br/><input type="checkbox" name="Mercredi" > <label>Mercredi </label>
 <br/> <br/><input type="checkbox" name="Jeudi" > <label>Jeudi </label>
@@ -42,18 +42,18 @@
 <br/> <br/><input type="checkbox" name="Dimanche" > <label>Dimanche </label>
 </td>
 
-<td width="10%"> <input type="checkbox" name="Prise 1" > <label>Prise 1 </label>  
-<br/> <br/><input type="checkbox" name="Prise 2" > <label>Prise 2 </label> 
+<td width="10%"> <input type="checkbox" name="Prise 1" > <label>Prise 1 </label>
+<br/> <br/><input type="checkbox" name="Prise 2" > <label>Prise 2 </label>
 <br/> <br/><input type="checkbox" name="Prise 3" > <label>Prise 3 </label> </td>
 
-        <td 
+        <td
 
 width="20%"> <input type="checkbox" name="Copie cycle jour" >  <label>Copier ce cycle sur toutes les prises de la pièce </label
-<br/> <br/> <br/>  <input type="checkbox" name="Copie cycle semaine" > <label>Copier ce cycle sur toutes les prises du domicile</label> 
+<br/> <br/> <br/>  <input type="checkbox" name="Copie cycle semaine" > <label>Copier ce cycle sur toutes les prises du domicile</label>
 
 <br/>
-<br/> 
-<input type="checkbox" name="Alerte Prise" > <label>Envoyer une alerte si la prise depasse le temps limite </label> 
+<br/>
+<input type="checkbox" name="Alerte Prise" > <label>Envoyer une alerte si la prise depasse le temps limite </label>
 <label for="SaisiTemps ">:</label>
 
 <input type="text" id="SaisiTemps" name="SaisiTemps" required
@@ -74,9 +74,9 @@ width="20%"> <input type="checkbox" name="Copie cycle jour" >  <label>Copier ce 
 
 </table>
 
-  
 
-      
+
+
 <footer> <a href="Contact" title="Contactez-nous aussi" " target="_blank">Contact</a>
     <a href="ServiceClient" title="Service Client" " target="_blank">Service Client</a>
     </footer>

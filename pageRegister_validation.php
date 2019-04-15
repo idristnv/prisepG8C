@@ -5,6 +5,9 @@
   if (!isset($_COOKIE['password'])) {
     setcookie('password',$_POST['inputPassword'],time() + 365*24*3600, null, null, false, true);
   }
+
+
+
   // Connexion à la base de données
 try{
   $bdd = new PDO('mysql:host=localhost;dbname=APP;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -17,6 +20,7 @@ try{
     }
   }
   $req->closeCursor();
+
   if( !$dejaInscrit ){//si ce n'est pas le cas on enregistre la personne
     // Insertion du message à l'aide d'une requête préparée
     $reqInsertion = $bdd->prepare('INSERT INTO utilisateur (adresseMail, nom, prenom, motDePasse, dateDeNaissance, role) VALUES(?, ?, ?, ?, ?, ?)');

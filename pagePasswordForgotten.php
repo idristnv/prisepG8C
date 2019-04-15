@@ -43,17 +43,17 @@ if(!empty($_POST)){
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="stylesheet/pageUserMenu.css">
+        <link rel="stylesheet" href="stylesheet/pagePasswordForgotten.css">
 
         <title>Mot de passe oublié</title>
     </head>
     <body>
-        <div>Mot de passe oublié</div>
+        <h1>Mot de passe oublié</h1>
         <form method="post">
             <?php
                 if (isset($er_mail)){
