@@ -1,32 +1,26 @@
 # prisepG8C
-Couleur
-//Arrière-plan de la page//
+charte graphique,couleur:
+
+pour l'arrière-plan de la page:
 body{
     background: linear-gradient(#686f77,white);
 }
 
-//Titre de la page//
+pour les titres important:
 h1{
     background: linear-gradient(to right,#406ca5,#1764c6);
-    color: #787b84;
-     text-shadow: white 2px 2px ;
+    color: #787b84; //couleur gris
+    text-shadow: white 2px 2px ;
 }
 
-iframe{
-    border-color: #3e4866; //vert clair//
-}
 
-//Cadre arrondis gris avec fond blanc//
+div coin arrondis couleur bleu nuit avec fond blanc:
 div{
-    border: solid #3e4866;
-    background-color: white;
-}
-
-input{
-    border:none;
-    border-bottom: 1px dotted grey;
+  border: solid #3e4866;
+  border-radius: 3vw;
+  background-color: white;
 }
 
 input:focus {
-  border: 2px solid #555;
+  border: 2px solid #555; //bleu-gris
 }

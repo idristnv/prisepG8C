@@ -17,7 +17,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="styleSheet/GestionCyclesStyle.css" />
+        <link rel="stylesheet" href="styleSheet/GstionCyclesStyle.css" />
 
         <title>Gestion des cycles</title>
     </head>

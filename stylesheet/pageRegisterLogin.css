@@ -70,7 +70,7 @@ input{
   box-sizing: border-box;
   font-size: 1.2em;
   border:none;
-  border-bottom: 1px dotted grey;
+  border-bottom: 2px dotted grey;
 }
 input:focus {
   border: 2px solid #555;

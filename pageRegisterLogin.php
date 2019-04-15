@@ -19,11 +19,11 @@ session_start();
       <form action="pageLogin_validation.php" method="post">
         <label>Adresse mail:</label>
         <br>
-        <input type="Email" name="inputEmailToConnect" >
+        <input type="Email" name="inputEmailToConnect" required>
         <br>
         <label>Mot de passe:</label>
         <br>
-        <input type="password" name="inputMotDePasseToConnect">
+        <input type="password" name="inputMotDePasseToConnect" required>
         <br>
         <p><a href="pagePasswordForgotten.php">Mot de passe oublié?</a></p>
         <input type="submit" value="Se connecter">
@@ -31,25 +31,26 @@ session_start();
     </div>
     <div class="divOfConnectionMode">
       <h2>S'inscrire</h2>
-      <form name="formRegistration" action="pageRegister_validation.php" method="post" onsubmit="return validateRegistration()" >
-        <label>Nom</label>
-        <input type="text" name="inputNom">
+      <form name="formRegistration" action="pageRegister_validation.php" method="post">
+        <!-- enfaite ca enleve les required et autre truc du genre min,max,... onsubmit="return validateRegistration()" -->
+        <label>Nom:</label>
+        <input type="text" name="inputNom" placeholder="Tapper ici votre nom" required>
 
-        <label>Prénom</label>
-        <input type="text" name="inputPrenom" >
+        <label>Prénom:</label>
+        <input type="text" name="inputPrenom" required title=" inscrivé ici votre prénom">
 
-        <label>Adresse mail</label>
-        <input type="Email" name="inputEmail">
+        <label>Adresse mail:</label>
+        <input type="Email" name="inputEmail" required >
 
         <div><label>Date de naissance:</label>
-        <input style="width: 200px" type="Date" min="1900-12-31" max="2000-12-31" name="inputDateDeNaissance">
+        <input style="width: 200px" type="Date" name="inputDateDeNaissance" min="1900-12-31" max="2000-12-31" required>
         </div>
-        <label>Mot de passe</label>
-        <input type="password" name="inputMotDePasse">
+        <label>Mot de passe:</label>
+        <input type="password" name="inputMotDePasse" required minlength="8">
 
-        <div><p><a href="gcu.html" style="color: blue;">Conditions générales d'utilisation</a></p>
+        <div><p><a href="pageGCU.html" style="color: blue;">Conditions générales d'utilisation</a></p>
 
-        <input type="checkbox" name=checkboxGcu>J'ai lu et j'accepte les conditions générales d'utilisation.</div>
+        <input type="checkbox" name=checkboxGcu required>J'ai lu et j'accepte les conditions générales d'utilisation.</div>
         </br>
         <input type="submit" name="" value="Confirmer l'inscription">
 
