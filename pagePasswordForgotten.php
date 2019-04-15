@@ -4,7 +4,7 @@ if(!empty($_POST)){
     extract($_POST);
     $valid = true;
     if (isset($_POST['oublie'])){
-        $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
+        $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe
 
         // Si le mail est vide alors on ne traite pas
         if(empty($mail)){
@@ -48,6 +48,8 @@ if(!empty($_POST)){
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet/pageUserMenu.css">
+
         <title>Mot de passe oublié</title>
     </head>
     <body>
@@ -57,7 +59,7 @@ if(!empty($_POST)){
                 if (isset($er_mail)){
             ?>
                 <div><?= $er_mail ?></div>
-            <?php   
+            <?php
                 }
             ?>
             <input type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }?>" required>
