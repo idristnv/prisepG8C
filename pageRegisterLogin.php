@@ -22,7 +22,7 @@ session_start();// pour les messages d'erreur crée par le client
         <input type="Email" name="inputEmailToConnect" required>
         <?php if (ISSET($_SESSION['emailNonExistant'])){
           if(!$_SESSION['emailNonExistant']){
-          echo '<p style="color:red;">Adresse mail inconnue de nos services</p>';
+          echo '<p style="color:red;">Adresse-mail inconnue de nos services</p>';
           }
         }
         ?>
@@ -45,16 +45,16 @@ session_start();// pour les messages d'erreur crée par le client
       <form name="formRegistration" action="pageRegister_validation.php" method="post">
         <!-- enfaite ca enleve les required et autre truc du genre min,max,... onsubmit="return validateRegistration()" -->
         <label>Nom:</label>
-        <input type="text" name="inputNom" placeholder="Tapper ici votre nom" required>
+        <input type="text" name="inputNom" placeholder="Tapez ici votre nom" required>
 
         <label>Prénom:</label>
-        <input type="text" name="inputPrenom" required title=" inscrivé ici votre prénom">
+        <input type="text" name="inputPrenom" required title="Inscrivez ici votre prénom">
 
         <label>Adresse mail:</label>
         <input type="Email" name="inputEmail" required >
         <?php if (ISSET($_SESSION['emailExistant'])) {
           if($_SESSION['emailExistant']){
-          echo '<p style="color:red;">Adresse mail deja utilisée, veuillez en renseigner une nouvelle ou cliqué sur "mot de passe oublié"</p>';
+          echo '<p style="color:red;">Adresse-mail deja utilisée, veuillez en renseigner une nouvelle ou cliquer sur "mot de passe oublié"</p>';
           }
         }
         ?>
@@ -69,7 +69,7 @@ session_start();// pour les messages d'erreur crée par le client
 
         <input type="checkbox" name=checkboxGcu required>J'ai lu et j'accepte les conditions générales d'utilisation.</div>
         </br>
-        <input type="submit" name="" value="Confirmer l'inscription">
+        <input type="submit" name="" value="Confirmez l'inscription">
       </form>
       <?php if (ISSET($_SESSION['inscriptionValider'])) {
           if($_SESSION['inscriptionValider']){
