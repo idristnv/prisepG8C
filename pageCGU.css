@@ -1,0 +1,41 @@
+body{
+    background-image: url(image/.);
+    background: linear-gradient(#686f77, white);
+  }
+  h1{
+    width: 90%;
+    text-align:center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 7vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+  
+    border-radius: 20px 60px 20px 60px;
+    background: linear-gradient(to right,#406ca5,#1764c6);
+    color: #787b84;
+    /*background-image: linear-gradient(to left top ,orange,blue) ;*/
+    text-shadow: white 2px 2px ;
+  
+  }
+  #divOfCGU{
+    display: flex;
+    flex-direction: row;
+  }
+
+  h2{
+    text-align: center;
+    padding-bottom: 0px;
+    font-size: 2vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color:black; 
+  }
+  #logoPrisep{
+    float: left;
+    padding-left: 0px;
+    width:13vw;
+  }
+footer{
+text-align: center;  
+}
