@@ -72,6 +72,9 @@ input{
   border:none;
   border-bottom: 2px dotted grey;
 }
+input[type=submit]{
+    border-bottom: 2px solid grey;
+}
 input:focus {
   border: 2px solid #555;
 }

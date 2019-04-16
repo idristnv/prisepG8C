@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start();// pour les messages d'erreur crée par le client
 ?>
 
 <!DOCTYPE html>
@@ -14,17 +14,28 @@ session_start();
 
   <h1>Prisep</h1>
   <div id="divOfConnectionAndRegistration">
-    <div class="divOfConnectionMode" style="height: 400px;">
+    <div class="divOfConnectionMode" style="height: 420px;">
       <h2>Connectez-vous</h2>
       <form action="pageLogin_validation.php" method="post">
         <label>Adresse mail:</label>
         <br>
         <input type="Email" name="inputEmailToConnect" required>
+        <?php if (ISSET($_SESSION['emailNonExistant'])){
+          if(!$_SESSION['emailNonExistant']){
+          echo '<p style="color:red;">Adresse mail inconnue de nos services</p>';
+          }
+        }
+        ?>
         <br>
         <label>Mot de passe:</label>
         <br>
         <input type="password" name="inputMotDePasseToConnect" required>
-        <br>
+        <?php if (ISSET($_SESSION['motDePasseCorrect'])) {
+          if(!$_SESSION['motDePasseCorrect']){
+          echo '<p style="color:red;">Mot de passe incorrect</p>';
+          }
+        }
+        ?>
         <p><a href="pagePasswordForgotten.php">Mot de passe oublié?</a></p>
         <input type="submit" value="Se connecter">
       </form>
@@ -41,6 +52,12 @@ session_start();
 
         <label>Adresse mail:</label>
         <input type="Email" name="inputEmail" required >
+        <?php if (ISSET($_SESSION['emailExistant'])) {
+          if($_SESSION['emailExistant']){
+          echo '<p style="color:red;">Adresse mail deja utilisée, veuillez en renseigner une nouvelle ou cliqué sur "mot de passe oublié"</p>';
+          }
+        }
+        ?>
 
         <div><label>Date de naissance:</label>
         <input style="width: 200px" type="Date" name="inputDateDeNaissance" min="1900-12-31" max="2000-12-31" required>
@@ -53,10 +70,16 @@ session_start();
         <input type="checkbox" name=checkboxGcu required>J'ai lu et j'accepte les conditions générales d'utilisation.</div>
         </br>
         <input type="submit" name="" value="Confirmer l'inscription">
-
       </form>
-
+      <?php if (ISSET($_SESSION['inscriptionValider'])) {
+          if($_SESSION['inscriptionValider']){
+          echo '<script type="text/javascript">alert("Vous etes inscrit!");
+                </script>';
+          }
+        }
+      ?>
     </div>
+
   </div>
 
 
