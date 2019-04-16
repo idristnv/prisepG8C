@@ -4,6 +4,7 @@ charte graphique,couleur:
 pour l'arrière-plan de la page:
 body{
     background: linear-gradient(#686f77,white);
+    background-repeat:no-repeat;
 }
 
 pour les titres important:
