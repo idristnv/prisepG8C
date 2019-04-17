@@ -54,6 +54,12 @@ if(!empty($_POST)){
     </head>
     <body>
         <h1>Mot de passe oublié</h1>
+        <br>
+        <br>
+
+        <p>
+            Veuillez renseigner l'adresse-mail sur laquelle vous souhaitez définir votre nouveau mot de passe. 
+        </p>
         <form method="post">
             <?php
                 if (isset($er_mail)){
