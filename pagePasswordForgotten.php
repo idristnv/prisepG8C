@@ -72,4 +72,8 @@ if(!empty($_POST)){
             <button type="submit" name="oublie">Envoyer</button>
         </form>
     </body>
+
+    <footer>
+        <p>Copyright &copy; Prisep - 2019 - Tous droits réservés</p>
+    </footer>
 </html>
