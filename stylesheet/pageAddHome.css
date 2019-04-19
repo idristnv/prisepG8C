@@ -5,7 +5,7 @@ footer {
     padding: 5px;
     background-color: rgb(92, 97, 117);
     color: white;
-    position: absolute; bottom: 0; left: 0; right: 0;
+    position: fixed; bottom: 0; left: 0; right: 0;
   }
 
 footer a{
@@ -18,11 +18,19 @@ color: black;
 font-family: Trebuchet MS;
 }
 
-body
-{
-  background-image:url(image/site5.jpg);
+body{
+  background: linear-gradient(#686f77,white);
 }
 
+.AjouterMaison{
+  width: 40%;
+  margin:2%;
+  padding:3%;
+  padding-top:0px;
+  border: solid #3e4866;
+  border-radius: 3vw ;
+  background-color: white;
+}
 
 label {
     font-size: 1.2em;
