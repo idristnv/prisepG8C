@@ -1,0 +1,84 @@
+
+* {
+font-family: trebuchet MS;
+}
+
+.navbar {
+  overflow: hidden;
+  background-image: linear-gradient(to right,#406ca5,#1764c6);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-radius: 1em 0em 0em 1em;
+}
+
+.navbar p{
+  font-size: 16px;
+  float: left;
+  color: white;
+  text-align: left;
+  padding: 0px 16px;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+}
+
+.Deroulement {
+  float: right;
+  overflow: hidden;
+}
+
+.BtnMonCompte {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 16px 35px;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0; 
+  overflow: hidden;
+}
+
+.Deroulement:hover {
+background-color: rgb(58, 142, 186);
+}
+
+
+.ContenuBtnMonCompte {
+  display: none;
+  position: absolute;
+  background-color: rgb(58, 142, 186);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.Deroulement:hover .ContenuBtnMonCompte {
+  display: block;
+}
+
+.ContenuBtnMonCompte a {
+  float: none;
+  color: white;
+  padding:  16px;
+  display: block;
+  text-align: center;
+}
+
+.ContenuBtnMonCompte a:hover {
+background-color: grey;
+}
+
+#logoPrisep{
+  position: absolute;
+  left:38%;
+  top: 1.5%;
+  float: center;
+  padding-left: 10px;
+  width:6vw;
+}

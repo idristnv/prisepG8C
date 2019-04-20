@@ -24,12 +24,15 @@ body{
 
 .AjouterMaison{
   width: 40%;
-  margin:2%;
+  margin:5%;
   padding:3%;
+  margin-left: 350px;
   padding-top:0px;
   border: solid #3e4866;
   border-radius: 3vw ;
   background-color: white;
+  color: #3e4866;
+
 }
 
 label {
@@ -38,3 +41,4 @@ label {
     display: block;
     font: 1.2rem 'Trebuchet MS', sans-serif; color: black; font-weight: bold;
 }
+
