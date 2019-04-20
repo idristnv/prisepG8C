@@ -1,6 +1,6 @@
 body{
   background-image: url(image/.);
-  background: linear-gradient(#15428c,white);
+  background: linear-gradient(#686f77,white);
 }
 #divAlert{
   display: flex;
@@ -20,7 +20,6 @@ body{
 #divAlert div h3{
   font-size:3vw;
   text-align: center;
-  color:#3e4866;
   margin:2px;
   padding: 1px;
 }
@@ -34,6 +33,7 @@ h2{
   padding-bottom: 5px;
   text-align: center;
   font-size: 4vw;
+  background: linear-gradient(to right,#406ca5,#1764c6);
   color: #787b84;
   text-shadow: white 1px 1px ;
 
