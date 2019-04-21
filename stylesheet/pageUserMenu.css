@@ -31,7 +31,7 @@ width: 80%;
 margin: 10%;
 margin-top:10px;
 margin-bottom:10px;
-height: 400px;
+height: 300px;
 border: 3px solid #3e4866;
 background-color: white;
 border-radius: 30px;
@@ -41,7 +41,7 @@ overflow: hidden;
 
 .divMaison h2 {
   text-align: center;
-  font-size: 4em;
+  font-size: 2em;
   color:#787b84;
   background-color: #1764c6;
   text-shadow: black 2px 1px ;
@@ -50,7 +50,7 @@ overflow: hidden;
   margin-top:0px;
   margin-bottom:0px;
 }
-.divMaison p {
+.adresse{
   text-align: center;
   font-size: 1em;
   background-color: #1764c6;
@@ -69,7 +69,13 @@ overflow: hidden;
   font-size: 2vw;
 }
 
-
+.nomPiece{
+  margin:5px;
+  padding: 10px;
+  font-size: 2em;
+  border: 3px solid #3e4866;
+  border-radius: 30px;
+}
 
 @media screen and (min-width: 1200px) {
   .divMaison {

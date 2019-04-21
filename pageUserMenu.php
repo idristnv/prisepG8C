@@ -22,31 +22,34 @@ session_start(); // On démarre la session AVANT toute chose
     }catch (Exception $e){
       die('error:'.$e->getMessage());
     }
-
     $requeteSQL = $bddAPP->query(
-      'SELECT nomResidence,adresse,nbPiece,adresseMail FROM maison');
-
-    while ( $donnee = $requeteSQL->fetch() ){
-      if ( $donnee['adresseMail']==$_SESSION['adresseMail']){
+      'SELECT m.*, p.nomPiece FROM maison m
+      INNER JOIN piece p
+      ON p.idResidence = m.idResidence
+      WHERE m.adresseMail="'.$_SESSION['adresseMail'].'"'
+      );
+      
+    $donnee = $requeteSQL->fetch();
+    while($donnee){
     ?>
-
-    <div class="divMaison" >
-      <h2><?php echo $donnee['nomResidence'] ?></h2>
-      <p>adresse: <?php echo $donnee['adresse'] ?> <br>
-        <?php echo $donnee['nbPiece'] ?>pièces 
-      </p>
-
-      <div class="divFlexDisplay">
-        <div class="pièce">
-          <?php ?>
-
+      <div class="divMaison" >
+        <h2><?php echo $donnee['nomResidence'] ?></h2>
+        <p class="adresse">adresse: <?php echo $donnee['adresse'] ?></p>
+        <div class="divFlexDisplay">
+          <?php 
+          $currentResidence=$donnee['nomResidence'];
+          while( $donnee['nomResidence']==$currentResidence ){
+          ?>
+            <p class="nomPiece"><?php echo $donnee['nomPiece']?></p>
+            
+          <?php
+            $donnee = $requeteSQL->fetch();
+          } 
+          ?>
         </div>
       </div>
-    </div>
-
-
+  
     <?php
-      }
     }//fin de la boucle while
     $requeteSQL->closeCursor();
     ?>
