@@ -9,9 +9,19 @@ body{
 
 pour les titres important:
 h1{
-    background: linear-gradient(to right,#406ca5,#1764c6);
-    color: #787b84; //couleur gris
-    text-shadow: white 2px 2px ;
+  width: 90%;
+  margin:5%;
+  text-align:center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 5vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  border-radius: 20px 60px 20px 60px;
+  background: linear-gradient(to right,#406ca5,#1764c6);
+  color: #787b84;
+  /*background-image: linear-gradient(to left top ,orange,blue) ;*/
+  text-shadow: white 2px 2px ;
+  padding:15px;
 }
 
 

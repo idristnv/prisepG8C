@@ -11,76 +11,59 @@ session_start(); // On démarre la session AVANT toute chose
 </head>
 <body>
 
-  <?php include("barre de navigation.html");?>
+  <?php //include("barre de navigation.html");?>
 
-  <h2>Alertes</h2>
-  <div id="divAlert">
-    <div>
-      <h3>Consommation:</h3>
-      <iframe src="iframeConsomationAlert.php" height="200 px"></iframe>
-    </div>
+  <h1>Vos demeures</h1>
 
-    <div>
-      <h3>Temperature:</h3>
-      <iframe src="iframeTemperatureAlert.php" height="200 px"></iframe>
-    </div>
-  </div>
-
-  <div>
-    <h2>Vos demeures:</h2>
-    <iframe src="iframeMaison.php" width="100%" height="600px"></iframe>
-  </div>
-
-  <p>methode session: salut <?php echo $_SESSION['prenom'];?> </p>
-  <?php
-    if (isset($_COOKIE['email'])) {
-      echo '<p>ton adresse mail est '.$_COOKIE['email'].'</p>';
-    }
-    if (isset($_COOKIE['password'])) {
-      echo '<p>ton mot de passe est '.$_COOKIE['password'].'</p>';
-    }
-  ?>
-  <br><br>
-  <?php
+  <div class="divFlexDisplay"> <!--pour le responsive -->
+    <?php
     try{
-      $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));//les derniers sont d'id de phpMyAdmin et le mot de passe et l'array c'est pour montrer les erreurs plus clairement, PDO est une extension de PHP
+      $bddAPP = new PDO('mysql:host=localhost;dbname=APP;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     }catch (Exception $e){
       die('error:'.$e->getMessage());
     }
 
-    $reponse = $bdd->query('SELECT nom,console,prix FROM jeux_video WHERE possesseur=\'Patrick\' ORDER BY prix DESC LIMIT 4,4' );
-    /* 'SELECT Champs From table' $reponse contient toute la reponse MySQL sous forme d'objet.
-    *WHERE possesseur="Patrick" on regarder seulement quand le champs posseur vaut Patrick
-    *ORDER BY prix DESC on regarde dans l'ordre decroissant (par defaut c'est croissant et si c'est des lettre alors alphabetiquement)
-    *LIMIT 4,4 recupere de la 4eme ligne a la 8huitieme
-    */
+    $requeteSQL = $bddAPP->query(
+      'SELECT nomResidence,adresse,nbPiece,adresseMail FROM maison');
 
-    $i=1;
-    echo '<H1>Patrick a acheté les jeux suivant:</H1>';
-    while ( $donnee = $reponse->fetch()) {//donnee est un array renvoyé par le fetch, chaque fois qu'on boucle, fetch va chercher dans $reponse l'entree suivante et organise les champs dans l'array $donnee,fetch renvoie faux dans données lorsqu'il est arrivé à la fin des données
+    while ( $donnee = $requeteSQL->fetch() ){
+      if ( $donnee['adresseMail']==$_SESSION['adresseMail']){
+    ?>
 
-    if ($i==1){
-      print_r( $donnee);
-    }
-  ?>
-    <p> <?php echo $i ?>) "<?php echo $donnee['nom'] ?>" sur <?php echo $donnee['console'] ?> à<?php echo $donnee['prix'] ?> euros</p>
-  <?php
-    $i++;
-    }
-    $reponse->closeCursor();//!!!on termine le traitement de la requete, ça permet d'eviter des erreurs a la requette suivante
-  ?>
+    <div class="divMaison" >
+      <h2><?php echo $donnee['nomResidence'] ?></h2>
+      <p>adresse: <?php echo $donnee['adresse'] ?> <br>
+        <?php echo $donnee['nbPiece'] ?>pièces 
+      </p>
 
-  <H1>les 3 jeux les plus chere (mais a moins de <?php echo $_GET['prixMax'] ?> euros) sur <?php echo $_GET['console'] ?> sont :</H1>
-  <?php
-    $req = $bdd->prepare('SELECT nom,console,prix from jeux_video where console=:nomConsole AND prix<:prixMax ORDER BY prix DESC LIMIT 0,3');
-    $req->execute(array('nomConsole'=>$_GET['console'],'prixMax'=>$_GET['prixMax']));
+      <div class="divFlexDisplay">
+        <div class="pièce">
+          <?php ?>
 
-    while ($donnee = $req->fetch()) {
-      echo '<p>'.$donnee['prix'].'euros : '.$donnee['nom'].'</p>';
-    }
-    $req->closeCursor();
-   ?>
+        </div>
+      </div>
+    </div>
 
+
+    <?php
+      }
+    }//fin de la boucle while
+    $requeteSQL->closeCursor();
+    ?>
+
+    <div id="divAjoutMaison">
+      <!-- on ajoute la possibilité d'ajouté une maison a la toute fin -->
+      <a href="pageAddHome.php"><img src="stylesheet/ICON_PLUS.png" 
+      alt="ajouter une maison" style="float:left; width:13vw;"></a>
+      <p>
+        Si vous souhaitez ajouter une demeure, prevoyé
+        le nom, l'adresse et le nombre de pièce de celle-ci,
+        ensuite il vous suffit de cliquer sur le bouton "+" et
+        de remplir le formulaire. Vous serez automatiquement 
+        redirigé vers cette page une fois l'enregistrement de la demeure terminé.
+      </p>
+    </div>
+  </div>
 
 
 </body>
