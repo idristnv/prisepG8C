@@ -68,7 +68,7 @@ session_start();// pour les messages d'erreur crée par le client
         <div><p><a href="pageGCU.html" style="color: blue;">Conditions générales d'utilisation</a></p>
 
         <input type="checkbox" name=checkboxGcu required>J'ai lu et j'accepte les conditions générales d'utilisation.</div>
-        </br>
+        <br>
         <input type="submit" name="" value="Confirmez l'inscription">
       </form>
       <?php if (ISSET($_SESSION['inscriptionValider'])) {

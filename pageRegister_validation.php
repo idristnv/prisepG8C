@@ -17,10 +17,9 @@ try{
   $req->closeCursor();
 
   if( !$dejaInscrit ){//si ce n'est pas le cas on enregistre la personne
-    session_destroy();
     // Insertion du message à l'aide d'une requête préparée
     $reqInsertion = $bdd->prepare('INSERT INTO utilisateur (adresseMail, nom, prenom, motDePasse, dateDeNaissance, role) VALUES(?, ?, ?, ?, ?, ?)');
-    $reqInsertion->execute(array(htmlspecialchars($_POST['inputEmail']), htmlspecialchars($_POST['inputNom']),htmlspecialchars($_POST['inputPrenom']), htmlspecialchars($_POST['inputMotDePasse']),htmlspecialchars($_POST['inputDateDeNaissance']), 'client'));
+    $reqInsertion->execute(array(htmlspecialchars($_POST['inputEmail']), htmlspecialchars($_POST['inputNom']), htmlspecialchars($_POST['inputPrenom']), password_hash($_POST['inputMotDePasse'], PASSWORD_DEFAULT),htmlspecialchars($_POST['inputDateDeNaissance']), 'client'));
     $reqInsertion->closeCursor();
     }
 }catch(Exception $e){
