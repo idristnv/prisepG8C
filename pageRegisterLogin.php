@@ -45,7 +45,7 @@ session_start();// pour les messages d'erreur crée par le client
       <form name="formRegistration" action="pageRegister_validation.php" method="post">
         <!-- enfaite ca enleve les required et autre truc du genre min,max,... onsubmit="return validateRegistration()" -->
         <label>Nom:</label>
-        <input type="text" name="inputNom" placeholder="Tapez ici votre nom" required>
+        <input type="text" name="inputNom" placeholder="Entrer votre nom ici" required>
 
         <label>Prénom:</label>
         <input type="text" name="inputPrenom" required title="Inscrivez ici votre prénom">
@@ -63,7 +63,7 @@ session_start();// pour les messages d'erreur crée par le client
         <input style="width: 200px" type="Date" name="inputDateDeNaissance" min="1900-12-31" max="2000-12-31" required>
         </div>
         <label>Mot de passe:</label>
-        <input type="password" name="inputMotDePasse" required minlength="8">
+        <input type="password" name="inputMotDePasse" placeholder="Minimum 8 caractères" required minlength="8">
 
         <div><p><a href="pageGCU.html" style="color: blue;">Conditions générales d'utilisation</a></p>
 
