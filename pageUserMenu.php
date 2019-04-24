@@ -23,7 +23,7 @@ session_start(); // On démarre la session AVANT toute chose
       die('error:'.$e->getMessage());
     }
     $requeteSQL = $bddAPP->query(
-      'SELECT m.*, p.nomPiece FROM maison m
+      'SELECT m.*, p.nomPiece, p.idPiece FROM maison m
       INNER JOIN piece p
       ON p.idResidence = m.idResidence
       WHERE m.adresseMail="'.$_SESSION['adresseMail'].'"'
@@ -40,7 +40,10 @@ session_start(); // On démarre la session AVANT toute chose
           $currentResidence=$donnee['nomResidence'];
           while( $donnee['nomResidence']==$currentResidence ){
           ?>
-            <p class="nomPiece"><a style="text-decoration:none;" href="pageMultiprise.php?maison=<?php echo $donnee['nomResidence'].'&piece='.$donnee['nomPiece']?>"><?php echo $donnee['nomPiece']?></a></p>
+            <p class="nomPiece"><a style="text-decoration:none;"
+             href="pageMultiprise.php?idResidence=
+             <?php echo $donnee['idResidence'].'&idPiece='.$donnee['idPiece']?>">
+             <?php echo $donnee['nomPiece']?></a></p>
             
           <?php
             $donnee = $requeteSQL->fetch();
@@ -57,7 +60,7 @@ session_start(); // On démarre la session AVANT toute chose
     <div id="divAjoutMaison">
       <!-- on ajoute la possibilité d'ajouté une maison a la toute fin -->
       <a href="pageAddHome.php"><img src="stylesheet/ICON_PLUS.png" 
-      alt="ajouter une maison" style="float:left; width:13vw;"></a>
+      alt="ajouter une maison" ></a>
       <p>
         Si vous souhaitez ajouter une demeure, prevoyé
         le nom, l'adresse et le nombre de pièce de celle-ci,

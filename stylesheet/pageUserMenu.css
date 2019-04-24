@@ -66,9 +66,12 @@ overflow: hidden;
   border: 3px solid #3e4866;
   background-color: white;
   border-radius: 30px;
-  font-size: 2vw;
+  font-size: 1.2em;
 }
-
+#divAjoutMaison img{
+  float:left;
+  width: 100px;
+}
 .nomPiece{
   margin:5px;
   padding: 10px;
@@ -82,5 +85,11 @@ overflow: hidden;
     width: 40%;
     padding:0%;
     margin: 4%;
-    }
+  }
+  #divAjoutMaison{
+    font-size: 2vw;
+  }
+  #divAjoutMaison img{
+    width:160px;
+  }
 }
