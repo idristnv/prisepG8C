@@ -13,7 +13,7 @@ try{
   while ($donnee = $req->fetch()){
     if ($donnee['adresseMail']==$_POST['inputEmailToConnect']){
       $_SESSION['emailNonExistant']=true;
-      if ($donnee['motDePasse']==$_POST['inputMotDePasseToConnect']){
+      if (password_verify($_POST['inputMotDePasseToConnect'],$donnee['motDePasse'])){
         $_SESSION['motDePasseCorrect']=true;
         //crée des variables pour plus tard
         $_SESSION['adresseMail']=$donnee['adresseMail'];

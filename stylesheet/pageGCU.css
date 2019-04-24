@@ -4,12 +4,12 @@ body{
   }
   h1{
     width: 90%;
+    margin:5%;
     text-align:center;
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 5vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
-    font-weight: 700;
     border-radius: 20px 60px 20px 60px;
     background: linear-gradient(to right,#406ca5,#1764c6);
     color: #787b84;
@@ -20,7 +20,7 @@ body{
 
   p{
     text-align: center;
-    font-size: 2vw;
+    font-size: 2em;
   }
 
 

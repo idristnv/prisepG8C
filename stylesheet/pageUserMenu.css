@@ -1,40 +1,95 @@
+
 body{
-  background-image: url(image/.);
-  background: linear-gradient(#15428c,white);
-}
-#divAlert{
-  display: flex;
-  margin-left: 20%;
-  width: 60%;
-  border: solid #3e4866;
-  border-radius: 15px;
-  background-color: white;
-
-}
-#divAlert div{
-  width: 50%;
-  border: solid #25fc11;
-  border-radius: 20px;
-  margin: 5px;
-}
-#divAlert div h3{
-  font-size:3vw;
-  text-align: center;
-  color:#3e4866;
-  margin:2px;
-  padding: 1px;
-}
-#divAlert iframe{
-  margin: 5px;
-  width: 95%;
+  background: linear-gradient(#686f77,white);
 }
 
-h2{
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: center;
-  font-size: 4vw;
+h1{
+  width: 90%;
+  margin:5%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align:center;
+  font-size: 6vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  border-radius: 20px 60px 20px 60px;
+  background: linear-gradient(to right,#406ca5,#1764c6);
   color: #787b84;
-  text-shadow: white 1px 1px ;
+  /*background-image: linear-gradient(to left top ,orange,blue) ;*/
+  text-shadow: white 2px 2px ;
+  padding:15px;
+}
 
+.divFlexDisplay{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+}
+
+.divMaison {
+width: 80%;
+margin: 10%;
+margin-top:10px;
+margin-bottom:10px;
+height: 300px;
+border: 3px solid #3e4866;
+background-color: white;
+border-radius: 30px;
+padding: 0px; /* pour les background coloré*/
+overflow: hidden;
+}
+
+.divMaison h2 {
+  text-align: center;
+  font-size: 2em;
+  color:#787b84;
+  background-color: #1764c6;
+  text-shadow: black 2px 1px ;
+  padding-top:10px;
+  padding-bottom:5px;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+.adresse{
+  text-align: center;
+  font-size: 1em;
+  background-color: #1764c6;
+  margin:0px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #3e4866;
+}
+#divAjoutMaison{
+  width: 80%;
+  margin: 10%;
+  margin-top:10px;
+  margin-bottom:10px;
+  border: 3px solid #3e4866;
+  background-color: white;
+  border-radius: 30px;
+  font-size: 1.2em;
+}
+#divAjoutMaison img{
+  float:left;
+  width: 100px;
+}
+.nomPiece{
+  margin:5px;
+  padding: 10px;
+  font-size: 2em;
+  border: 3px solid #3e4866;
+  border-radius: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .divMaison {
+    width: 40%;
+    padding:0%;
+    margin: 4%;
+  }
+  #divAjoutMaison{
+    font-size: 2vw;
+  }
+  #divAjoutMaison img{
+    width:160px;
+  }
 }
