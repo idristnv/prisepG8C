@@ -7,6 +7,8 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <title>Multirpise</title>
+  <link rel="stylesheet" href="stylesheet/pageMultiprise.css">
+
 </head>
 <body>
 <div class="divFlexDisplay"> <!--pour le responsive -->
@@ -30,8 +32,7 @@ session_start();
     print_r($donnee);
     ?>
     <div id="divMaisonPiece">
-      <h2> <?php echo $donnee['nomResidence'] ?></h2>
-      <h3><?php echo $donnee['nomPiece']?></h3>
+      <h1> <?php echo $donnee['nomResidence'] ?> <br> <?php echo $donnee['nomPiece']?></h2>
     </div>
    
     <?php
@@ -39,8 +40,34 @@ session_start();
     ?>
       <div class="divMultiprise" >
         <!-- ce qu'on affiche de la multiprise -->
-        <h2><?php echo $donnee['nomMultiprise'] ?></h2>
-        
+        <div class="divHeaderMultiprise">
+          <button><img src="stylesheet/image/iconOnOff" alt="icone On/Off"></button>
+          <div style="width:80%;">
+            <h2><?php echo $donnee['nomMultiprise'] ?></h2>
+            <div class="parametreMultiprise"> 
+              <p><?php 
+                if($donnee['capteurLuminosite']){
+                  echo '<img src="stylesheet/image/iconLightOn" alt="lumière détecté">';
+                }else {
+                  echo '<img src="stylesheet/image/iconLightOff" alt="lumière non détecté">';
+                }
+                ?>
+              </p>
+              <p><?php echo '<img src="stylesheet/image/iconAlertOn" alt="notification activé">'; ?></p>
+              <p>Total d'heures allumés: <?php echo $donnee['totalTempsAllume'] ?></p>
+              <p><?php 
+                if($donnee['capteurTemperature']<35){
+                  echo '<img src="stylesheet/image/iconTemperatureGreen" alt="temperature optimal">';
+                }elseif ($donnee['capteurTemperature']<70) {
+                  echo '<img src="stylesheet/image/iconTemperatureOrange" alt="temperature élevé">';
+                }else{
+                  echo '<img src="stylesheet/image/iconTemperatureRed" alt="temperature critique">';
+                }
+                ?>
+              </p>
+            </div> 
+          </div>
+        </div>
 
 
         <div class="divFlexDisplay">
@@ -63,7 +90,7 @@ session_start();
 
     <div id="divAjoutMultiprise">
       <a href="pageAddMultiprise.php"><img src="stylesheet/ICON_PLUS.png" 
-      alt="ajouter une multiprise" style="float:left; width:13vw;"></a>
+      alt="ajouter une multiprise" ></a>
       <p>
         Si vous souhaitez ajouter une multiprise, relevez le numéro de serie
         en dessous de la multiprise et prévoyez un nom à celle-ci, ensuite 

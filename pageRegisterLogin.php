@@ -16,7 +16,7 @@ session_start();// pour les messages d'erreur crée par le client
   <div id="divOfConnectionAndRegistration">
     <div class="divOfConnectionMode" style="height: 420px;">
       <h2>Connectez-vous</h2>
-      <form action="pageLogin_validation.php" method="post">
+      <!-- <form action="validation/pageLogin_validation.php" method="post"> -->
         <label>Adresse mail:</label>
         <br>
         <input type="Email" name="inputEmailToConnect" required>
@@ -42,7 +42,7 @@ session_start();// pour les messages d'erreur crée par le client
     </div>
     <div class="divOfConnectionMode">
       <h2>S'inscrire</h2>
-      <form name="formRegistration" action="pageRegister_validation.php" method="post">
+      <form name="formRegistration" action="validation/pageRegister_validation.php" method="post">
         <!-- enfaite ca enleve les required et autre truc du genre min,max,... onsubmit="return validateRegistration()" -->
         <label>Nom:</label>
         <input type="text" name="inputNom" placeholder="Entrer votre nom ici" required>

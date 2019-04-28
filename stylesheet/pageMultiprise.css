@@ -1,0 +1,84 @@
+body{
+  background: linear-gradient(#686f77,white);
+  background-repeat:no-repeat;
+}
+h1{
+  width: 50%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 3vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  border-radius: 60px 140px 60px 140px;
+  background: linear-gradient(to right,#406ca5,#1764c6);
+  color: #787b84;
+  /*background-image: linear-gradient(to left top ,orange,blue) ;*/
+  text-shadow: white 2px 2px ;
+  padding:15px;
+  text-align: center;
+}
+
+.divMultiprise{
+  width: 46%;
+  margin: 2%;
+  margin-top:10px;
+  border: 3px solid #3e4866;
+  border-radius: 30px;
+  background-color: white;
+  padding: 0px; /* pour les background coloré*/
+  overflow: hidden;
+}
+.divHeaderMultiprise{
+  border-bottom: 3px solid #3e4866;
+  display: flex;
+}
+.divHeaderMultiprise button{
+  width: 15%;
+  height: 15%;
+  border: 2px solid #3e4866;
+  border-radius: 20px;
+}
+.divHeaderMultiprise button img{
+  width: 100%;
+}
+.divHeaderMultiprise div h2{
+  width: 85%;
+  margin-top: 1vw;
+  text-align: center;
+  font-size: 2vw;
+}
+ .parametreMultiprise {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+}
+
+.parametreMultiprise p{
+  width: 10%;
+  border: 3px solid #3e4866;
+  padding: 2%;
+  margin: 1%;
+  border-radius: 1vw;
+  font-size: 1.2vw;
+}
+.parametreMultiprise img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+#divAjoutMultiprise{
+  width: 80%;
+  margin: 10%;
+  margin-top:10px;
+  margin-bottom:10px;
+  border: 3px solid #3e4866;
+  background-color: white;
+  border-radius: 20px;
+  font-size: 2vw;
+}
+#divAjoutMultiprise img{
+  float:left;
+  width: 15%;
+}
