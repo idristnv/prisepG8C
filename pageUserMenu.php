@@ -33,8 +33,8 @@ session_start(); // On démarre la session AVANT toute chose
     while($donnee){
     ?>
       <div class="divMaison" >
-        <h2><?php echo $donnee['nomResidence'] ?></h2>
-        <p class="adresse">Adresse: <?php echo $donnee['adresse'] ?></p>
+        <h2><?= $donnee['nomResidence'] ?></h2>
+        <p class="adresse">Adresse: <?= $donnee['adresse'] ?></p>
         <div class="divFlexDisplay">
           <?php 
           $currentResidence=$donnee['nomResidence'];
@@ -42,8 +42,8 @@ session_start(); // On démarre la session AVANT toute chose
           ?>
             <p class="nomPiece"><a style="text-decoration:none;"
              href="pageMultiprise.php?idResidence=
-             <?php echo $donnee['idResidence'].'&idPiece='.$donnee['idPiece']?>">
-             <?php echo $donnee['nomPiece']?></a></p>
+             <?= $donnee['idResidence'].'&idPiece='.$donnee['idPiece']?>">
+             <?= $donnee['nomPiece']?></a></p>
             
           <?php
             $donnee = $requeteSQL->fetch();

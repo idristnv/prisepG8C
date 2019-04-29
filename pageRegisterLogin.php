@@ -10,13 +10,13 @@ session_start();// pour les messages d'erreur crée par le client
   <link rel="stylesheet" href="stylesheet/pageRegisterLogin.css">
 </head>
 <body>
-  <p><img src="styleSheet/image/logoSite.png"  id="logoPrisep" alt="logo"></p>
+  <p><img src="styleSheet/image/logoSite"  id="logoPrisep" alt="logo"></p>
 
   <h1>Prisep</h1>
   <div id="divOfConnectionAndRegistration">
     <div class="divOfConnectionMode" style="height: 420px;">
       <h2>Connectez-vous</h2>
-      <!-- <form action="validation/pageLogin_validation.php" method="post"> -->
+      <form action="validation/pageLogin_validation.php" method="post">
         <label>Adresse mail:</label>
         <br>
         <input type="Email" name="inputEmailToConnect" required>
@@ -41,7 +41,7 @@ session_start();// pour les messages d'erreur crée par le client
       </form>
     </div>
     <div class="divOfConnectionMode">
-      <h2>S'inscrire</h2>
+      <h2>Inscrivez-vous</h2>
       <form name="formRegistration" action="validation/pageRegister_validation.php" method="post">
         <!-- enfaite ca enleve les required et autre truc du genre min,max,... onsubmit="return validateRegistration()" -->
         <label>Nom:</label>
