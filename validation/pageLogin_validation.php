@@ -26,6 +26,7 @@ try{
 }catch(Exception $e){
   die('Erreur : '.$e->getMessage());
 }
+
 // Redirection du visiteur vers la page d'inscription
 if($_SESSION['emailNonExistant'] AND $_SESSION['motDePasseCorrect']){
   $_SESSION['inscriptionValider']=true;
@@ -33,5 +34,3 @@ if($_SESSION['emailNonExistant'] AND $_SESSION['motDePasseCorrect']){
 }else{
   header('Location: ../pageRegisterLogin.php');
 }
-?>
-
