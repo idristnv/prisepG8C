@@ -10,13 +10,11 @@ h1{
   font-size: 7vw;
   font-family: "roboto", Arial;
   font-weight: 700;
-
   border-radius: 20px 60px 20px 60px;
   background: linear-gradient(to right,#406ca5,#1764c6);
   color: #787b84;
   /*background-image: linear-gradient(to left top ,orange,blue) ;*/
   text-shadow: white 2px 2px ;
-
 }
 
 h2{
@@ -35,7 +33,6 @@ iframe{
   border-color: #3e4866;
   margin-left: 5%;
   margin-right:5%;
-
 }
 
 #logoPrisep{
@@ -87,6 +84,12 @@ input[type=Date]{
 }
 
 @media screen and (max-width: 700px) {
+  h1{
+    font-size: 4em;
+  }
+  #logoPrisep{
+    width: 100px;
+  }
   #divOfConnectionAndRegistration{
   display: flex;
   flex-direction: column;

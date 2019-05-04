@@ -6,7 +6,7 @@ session_start();
 <html>
   <head>
     <meta charset="UTF-8">
-    <title><Prisep</title>
+    <title>Prisep</title>
     <link rel="stylesheet" href="stylesheet/pageRegisterLogin.css">
   </head>
   <body>
@@ -82,6 +82,7 @@ session_start();
 
     </div>
   </body>
+  <?php include("Footer.html") ?>
 
   <script type="text/javascript"> //regarder a quoi sert le type
     //<![CDATA] //a quoi ça pourrait servir
