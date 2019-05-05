@@ -1,18 +1,13 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(#686f77, white);
-    background-repeat: no-repeat;
-}
 p{
     text-align: center;
     font-size: 2vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 ul{
     display: flex;
     position: absolute;
-    top: 50%;
+    bottom: 15%;
     left: 50%;
     transform: translate(-50%,50%); 
 }
