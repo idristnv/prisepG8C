@@ -26,6 +26,6 @@ try{
   die( 'Erreur : '.$e->getMessage() );
 }
 // Redirection du visiteur vers la page d'inscription
-header('Location: pageRegisterLogin.php');
+header('Location: ../pageRegisterLogin.php');
 ?>
 
