@@ -7,6 +7,9 @@
         <title>Ajouter une résidence</title>
     </head>
     <body>
+        <?php include("barre de navigation.html"); ?>
+
+
         <br/> <br/> <br/>
 
         <div class="AjouterMaison">
@@ -34,11 +37,22 @@
             <input type="number" name="CodePostal" required minlength="5" maxlength="5" size="10" placeholder="Ex : 75015">
 
             <br/> <br/> <br/>
+
+            <label> Nom de la pièce :</label>
+            <input type="text" name="NomPièce" required minlength="1" maxlength="20" size="30" placeholder="Nom de la pièce où sera la multiprise">
+
+
+
+            <br/> <br/> <br/>
                 <input type="submit" value="Envoyer" style="width:200px">
             </form>
+
+            
+
         </div>
 
         
     </body>
+    <?php include("footer.html"); ?>
 </html>
 
