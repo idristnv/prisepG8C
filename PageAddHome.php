@@ -12,6 +12,8 @@
         <br/> <br/> <br/>
         <div class="AjouterMaison">
             <h1> Ajouter votre domicile</h1>
+            <form action="validation/pageAddHome_validation.php" method="post">
+
             <label> Nom  :</label>
 
             <input type="text" name="NomMaison" required
@@ -22,7 +24,7 @@
             <label> Adresse :</label>
 
             <input type="text" name="Adresse" required
-            minlength="15" maxlength="200" size="75" placeholder="Saisissez l'adresse de votre domicile">
+            minlength="4" maxlength="200" size="75" placeholder="Saisissez l'adresse de votre domicile">
         <br/> <br/> <br/>
 
         <label> Ville :</label>
@@ -34,8 +36,8 @@
 
         <label> Code Postal :</label>
 
-            <input type="text" name="CodePostal" required
-            minlength="0" maxlength="10" size="10" placeholder="Ex : 75015">
+            <input type="number" name="CodePostal" required
+            minlength="5" maxlength="5" size="10" placeholder="Ex : 75015">
 
 
         <br/> <br/> <br/>
@@ -43,7 +45,18 @@
             <div>
             <input type="submit" value="Envoyer" style="width:200px">
             </div>
+        </form>
         </div>
+
+
+
+
+
+
+
+
+
+        
     </body>
 </html>
 
