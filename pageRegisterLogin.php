@@ -6,7 +6,7 @@ session_start();
 <html>
   <head>
     <meta charset="UTF-8">
-    <title><Prisep</title>
+    <title>Prisep</title>
     <link rel="stylesheet" href="stylesheet/pageRegisterLogin.css">
   </head>
   <body>
@@ -60,7 +60,7 @@ session_start();
           ?>
 
           <div><label>Date de naissance:</label>
-          <input style="width: 200px" type="Date" name="inputDateDeNaissance" min="1900-12-31" max="2000-12-31" required>
+          <input style="width: 200px" type="Date" name="inputDateDeNaissance" min="1900-12-31" max="<?php echo date("Y")-18;echo date("-m-d");?>" required>
           </div>
           <label>Mot de passe:</label>
           <input type="password" name="inputMotDePasse" placeholder="Minimum 8 caractères" required minlength="8">
@@ -82,6 +82,7 @@ session_start();
 
     </div>
   </body>
+  <?php include("Footer.html") ?>
 
   <script type="text/javascript"> //regarder a quoi sert le type
     //<![CDATA] //a quoi ça pourrait servir
