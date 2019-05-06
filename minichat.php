@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Mini-chat</title>
+        <link rel="stylesheet" href="stylesheet/pageUserMenu.css">
     </head>
     <style>
     form
@@ -11,6 +12,8 @@
     }
     </style>
     <body>
+    <?php include("barre de navigation.html");?>
+
     
     <form action="minichat_post.php?ticket=<?php $_GET['ticket'] ?>" method="post">
         <p>
@@ -34,14 +37,14 @@ catch(Exception $e)
 
 // Récupération des derniers messages
 $reponse = $bdd->query('SELECT adresseMail, texte, numTicket FROM message ORDER BY messageNB ASC');
-//$reponse = $bdd->query('SELECT * FROM message');
+//$reponse = $bdd->query('SELECT * FROM messgae');
 //$ticket = $bdd->query('SELECT mailUser FROM ticket ORDER BY numTicket ASC');
 
 
 
 // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
 while ($donnees = $reponse->fetch()){
-    if ($donnees['adresseMail'] == 'valentinnajean@isep.fr' and $donnees['numTicket'] == $_GET["ticket"])
+    if ($donnees['numTicket'] == $_GET["ticket"])
 {
 	echo '<p><strong>' . $donnees['adresseMail'] . '</strong> : ' . $donnees['texte'] . '</p>';
 }
