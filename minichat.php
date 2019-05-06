@@ -25,7 +25,7 @@
 // Connexion à la base de données
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=requetes;charset=utf8', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
 }
 catch(Exception $e)
 {
@@ -33,8 +33,8 @@ catch(Exception $e)
 }
 
 // Récupération des derniers messages
-$reponse = $bdd->query('SELECT adresseMail, texte, numTicket FROM messgae ORDER BY messageNB ASC');
-//$reponse = $bdd->query('SELECT * FROM messgae');
+$reponse = $bdd->query('SELECT adresseMail, texte, numTicket FROM message ORDER BY messageNB ASC');
+//$reponse = $bdd->query('SELECT * FROM message');
 //$ticket = $bdd->query('SELECT mailUser FROM ticket ORDER BY numTicket ASC');
 
 

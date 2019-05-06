@@ -44,7 +44,7 @@
 
     try
     {
-	    $bdd = new PDO('mysql:host=localhost;dbname=requetes;charset=utf8', 'root', '');
+	    $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
     }
     catch(Exception $e)
     {
