@@ -2,7 +2,6 @@
 session_start();
 $_SESSION['emailNonExistant']=false;
 $_SESSION['motDePasseCorrect']=false;
-$_SESSION['inscriptionValider']=false;
 
 // Connexion à la base de données
 try{
@@ -26,10 +25,8 @@ try{
 }catch(Exception $e){
   die('Erreur : '.$e->getMessage());
 }
-
 // Redirection du visiteur vers la page d'inscription
 if($_SESSION['emailNonExistant'] AND $_SESSION['motDePasseCorrect']){
-  $_SESSION['inscriptionValider']=true;
   header('Location: ../pageUserMenu.php');
 }else{
   header('Location: ../pageRegisterLogin.php');
