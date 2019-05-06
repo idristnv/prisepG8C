@@ -1,18 +1,4 @@
 
-footer {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    background-color: rgb(92, 97, 117);
-    color: white;
-    position: fixed; bottom: 0; left: 0; right: 0;
-  }
-
-footer a{
-padding-left: 100px;
-padding-right: 100px;
-color: black;
-}
 
 * {
 font-family: Trebuchet MS;
