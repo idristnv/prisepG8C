@@ -84,6 +84,7 @@ session_start();
   </body>
   <?php include("footer.html") ?>
 
+  
   <script type="text/javascript"> //regarder a quoi sert le type
     //<![CDATA] //a quoi ça pourrait servir
     function validateRegistration(){
