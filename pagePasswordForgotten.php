@@ -75,6 +75,15 @@ if(!empty($_POST)){
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 
     <?php include("Footer.html") ?>
 
