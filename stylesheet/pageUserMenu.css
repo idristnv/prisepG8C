@@ -33,7 +33,6 @@ width: 80%;
 margin: 10%;
 margin-top:10px;
 margin-bottom:10px;
-height: 300px;
 border: 3px solid #3e4866;
 background-color: white;
 border-radius: 30px;
@@ -52,14 +51,16 @@ overflow: hidden;
   margin-top:0px;
   margin-bottom:0px;
 }
+
 .adresse{
   text-align: center;
   font-size: 1em;
   background-color: #1764c6;
-  margin:0px;
+  margin: 0px;
   padding-bottom: 5px;
   border-bottom: 3px solid #3e4866;
 }
+
 #divAjoutMaison{
   width: 80%;
   margin: 10%;
@@ -70,16 +71,41 @@ overflow: hidden;
   border-radius: 30px;
   font-size: 1.2em;
 }
+
 #divAjoutMaison img{
   float:left;
   width: 100px;
 }
+
 .nomPiece{
   margin:5px;
   padding: 10px;
   font-size: 2em;
   border: 3px solid #3e4866;
-  border-radius: 30px;
+  border-radius: 15px;
+}
+
+.addRoomForm{
+  border: 3px solid #3e4866;
+  border-radius: 20px;
+  padding: 5px;
+  display: flex;
+  flex: wrap;
+  width: 100%;
+  margin:5px;
+}
+
+.addRoomForm *{
+  height: 80px;
+  border:none;
+}
+.addRoomForm input[type=text] {
+  width: 80%;
+  border:none;
+  font-size: 1.3em;
+}
+.addRoomForm input[type=image] {
+  width: 20%;
 }
 
 @media screen and (min-width: 1200px) {

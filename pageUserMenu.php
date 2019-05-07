@@ -40,15 +40,18 @@ session_start(); // On démarre la session AVANT toute chose
           $currentResidence=$donnee['nomResidence'];
           while( $donnee['nomResidence']==$currentResidence ){
           ?>
-            <p class="nomPiece"><a style="text-decoration:none;"
-             href="pageMultiprise.php?idResidence=
-             <?= $donnee['idResidence'].'&idPiece='.$donnee['idPiece']?>">
-             <?= $donnee['nomPiece']?></a></p>
+            <p class="nomPiece"><a style="text-decoration:none;" href="pageMultiprise.php?idResidence=<?= $donnee['idResidence'].'&idPiece='.$donnee['idPiece']?>">
+            <?= $donnee['nomPiece']?></a></p>
+            
             
           <?php
             $donnee = $requeteSQL->fetch();
-          } 
+          }
           ?>
+          <form class="addRoomForm" action="validation/addRoom_Validation.php" method="post">
+            <input type="text" name="roomNameInput" required placeholder=" Inscrivez ici le nom de la pièce à ajouter">
+            <input type="image" src="stylesheet/ICON_PLUS.png"   value="">
+          </form>
         </div>
       </div>
   
