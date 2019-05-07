@@ -1,24 +1,8 @@
 caption {
-font-family: Trebuchet MS;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-size: 16px;
-
-
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    background-color: rgb(92, 97, 117);
-    color: white;
-    position: absolute; bottom: 0; left: 0; right: 0;
-  }
-
-footer a{
-padding-left: 100px;
-padding-right: 100px;
-color: black;
-}
 td, th
 {
 border: 3px solid rgb(47, 57, 91);
@@ -30,16 +14,17 @@ height: 100%;
 table
 {
   border-collapse: collapse;
+  border-radius: 3vw;
   width : 1000px;
   height : 400px;
   margin: 0 auto;
-  background-color: #E8DBC8;
+  background-color: white;
 }
 
 
 
 * {
-font-family: Trebuchet MS;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 h1 {
