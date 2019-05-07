@@ -1,15 +1,15 @@
-
 * {
-font-family: trebuchet MS;
+font-family: Trebuchet MS;
 }
-
 .navbar {
   overflow: hidden;
-  background-image: linear-gradient(to right,#406ca5,#1764c6);
+  background-color: #3e4866;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  border-radius: 1em 1em 1em 1em;
+  border-radius: 20px 60px 20px 60px;
+  border: 2px solid black;
+
 }
 
 .navbar p{
@@ -76,9 +76,7 @@ background-color: grey;
 
 #logoPrisep{
   position: absolute;
-  left:38%;
-  top: 1.5%;
-  float: center;
-  padding-left: 10px;
-  width:6vw;
+  float: left;
+  width:6em;
+  top:1.4%;
 }
