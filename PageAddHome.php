@@ -53,6 +53,6 @@
 
         
     </body>
-    <?php include("footer.html"); ?>
+    <?php include("Footer.html"); ?>
 </html>
 

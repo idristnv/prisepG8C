@@ -20,7 +20,8 @@
          </p>
         </div>
         <br><br>
-        <p>Copyright &copy; Prisep - 2019 - Tous droits réservés</p>
     </body>
+
+    <?php include("Footer.html") ?>
 
 </html>

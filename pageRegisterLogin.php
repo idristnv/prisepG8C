@@ -82,7 +82,7 @@ session_start();
 
     </div>
   </body>
-  <?php include("footer.html") ?>
+  <?php include("Footer.html") ?>
 
   
   <script type="text/javascript"> //regarder a quoi sert le type

@@ -76,7 +76,6 @@ if(!empty($_POST)){
     <br>
     <br>
 
-    <footer>
-        <p>Copyright &copy; Prisep - 2019 - Tous droits réservés</p>
-    </footer>
+    <?php include("Footer.html") ?>
+
 </html>
