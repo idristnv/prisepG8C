@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Creation Ticket</title>
+        <link rel="stylesheet" href="stylesheet/pageUserMenu.css">
     </head>
     <style>
     form
@@ -25,7 +25,8 @@
     }
     </style>
     <body>
-    <h1>Requetes</h1>
+
+    <?php include("barre de navigation.html");?>
     <h2>Nouveau tickets</h2>
     <form action="newticket_post.php" method="post">
         <p>
@@ -44,7 +45,7 @@
 
     try
     {
-	    $bdd = new PDO('mysql:host=localhost;dbname=requetes;charset=utf8', 'root', '');
+	    $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
     }
     catch(Exception $e)
     {

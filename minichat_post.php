@@ -2,7 +2,7 @@
 // Connexion à la base de données
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=requetes;charset=utf8', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
 }
 catch(Exception $e)
 {
@@ -11,7 +11,7 @@ catch(Exception $e)
 
 // Insertion du message à l'aide d'une requête préparée
 $ticketfinal = $bdd->query('SELECT numTicket FROM Ticket ORDER BY numTicket DESC');
-$req = $bdd->prepare('INSERT INTO messgae (adresseMail, numTicket, texte) VALUES(?, ?, ?)');
+$req = $bdd->prepare('INSERT INTO message (adresseMail, numTicket, texte) VALUES(?, ?, ?)');
 
 while ($dernierticket = $ticketfinal->fetch()){
         if ($dernierticket['numTicket'] == $_POST['numTicketURL']){
@@ -19,7 +19,7 @@ while ($dernierticket = $ticketfinal->fetch()){
         }
 }
 
-$envoi = $bdd->query('SELECT adresseMail, texte, numTicket FROM messgae ORDER BY messageNB ASC');
+$envoi = $bdd->query('SELECT adresseMail, texte, numTicket FROM message ORDER BY messageNB ASC');
 
 $req->closeCursor();
 $ticketfinal->closeCursor();
