@@ -48,7 +48,7 @@ if(!empty($_POST)){
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="stylesheet/pagePasswordForgotten.css">
+        <link rel="stylesheet" href="pagePasswordForgotten.css">
 
         <title>Mot de passe oublié</title>
     </head>
@@ -72,6 +72,15 @@ if(!empty($_POST)){
             <button type="submit" name="oublie">Envoyer</button>
         </form>
     </body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
