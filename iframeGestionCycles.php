@@ -1,18 +1,5 @@
 <!DOCTYPE html>
 
-<div class="navbar">
-    <p href="#bonjour">Bonjour Client</p>
-    <div class="dropdown">
-      <button class="dropbtn">Mon Compte
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Changer d'adresse email</a>
-        <a href="#">Changer de mot de passe</a>
-        <a href="#">Se deconnecter</a>
-      </div>
-    </div>
-</div>
 
 <html>
     <head>
@@ -23,6 +10,7 @@
     </head>
 
     <body>
+    <?php include("barre de navigation.html");?>
       <br/>
       <br/>
       <br/>
@@ -67,18 +55,8 @@ width="20%"> <input type="checkbox" name="Copie cycle jour" >  <label>Copier ce 
 <td width="20%"></td>
 
 </tr>
-
-
-
-
-
 </table>
+</body>
 
-
-
-
-<footer> <a href="Contact" title="Contactez-nous aussi" " target="_blank">Contact</a>
-    <a href="ServiceClient" title="Service Client" " target="_blank">Service Client</a>
-    </footer>
-    </body>
+<?php include("Footer.html") ?>
 </html>
