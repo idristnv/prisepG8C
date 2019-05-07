@@ -37,7 +37,7 @@
         <td
 
 width="20%"> <input type="checkbox" name="Copie cycle jour" >  <label>Copier ce cycle sur toutes les prises de la pièce </label
-<br/> <br/> <br/>  <input type="checkbox" name="Copie cycle semaine" > <label>Copier ce cycle sur toutes les prises du domicile</label>
+</br> <br/> <br/>  <input type="checkbox" name="Copie cycle semaine" > <label>Copier ce cycle sur toutes les prises du domicile</label>
 
 <br/>
 <br/>
@@ -57,6 +57,9 @@ width="20%"> <input type="checkbox" name="Copie cycle jour" >  <label>Copier ce 
 </tr>
 </table>
 </body>
-
+<br>
+<br>
+<br>
+<br>
 <?php include("Footer.html") ?>
 </html>
