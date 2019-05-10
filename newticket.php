@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="stylesheet/pageUserMenu.css">
+        <link rel="stylesheet" href="stylesheet/pagesSAV.css">
     </head>
     <style>
     form
@@ -12,6 +12,7 @@
     h1 
     {
         text-align:center;
+        float: center;
     }
     h2
     {
@@ -25,15 +26,25 @@
     }
     </style>
     <body>
-
     <?php include("barre de navigation.html");?>
+    <h1>
+    Besoin d'aide?
+    </h1>
+
+    <p style="text-align: center; font-size: 1.5vw">
+    Un problème? Une question ? Nos administrateurs peuvent vous aider. 
+    <br><br>
+    Il vous suffit de créer un ticket et expliquer votre problème et un administrateur Prisep sera là pour résoudre le problème.  
+    </p>
+
+
     <h2>Nouveau tickets</h2>
     <form action="newticket_post.php" method="post">
         <p>
         <!-- <label for="pseudo">Pseudo</label> : <input type="text" name="adresseMail" id="pseudo" /><br /> -->
         <!-- <label for="message">Message</label> :  <input type="text" name="texte" id="message" /><br /> -->
 
-        <input type="submit" name="bouton ticket" value="Creer un ticket"/>
+        <input type="submit" name="bouton ticket" style="font-size:1.5vw; border-radius: 3vw; padding: 0.5vw 1vw; border: 0.15vw solid #3E4866;" value="Creer un ticket"/>
     
 	</p>
     </form>
@@ -73,6 +84,8 @@ $listTicket->closeCursor();
 ?>
     <!-- </div> -->
 </body>
+
+<?php include("Footer.html");?>
 </html>
 
 

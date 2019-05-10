@@ -12,15 +12,14 @@
     }
     </style>
     <body>
-    <?php include("barre de navigation.html");?>
 
     
-    <form action="minichat_post.php?ticket=<?php $_GET['ticket'] ?>" method="post">
+    <form action="savAdminMsg_post.php?ticket=<?php $_GET['ticket'] ?>" method="post">
         <p>
         <!-- <label for="pseudo">Pseudo</label> : <input type="text" name="adresseMail" id="pseudo" /><br /> -->
-        <label for="message" style="font-size:1.5vw;">Message</label> :  <input style="height:40px; width:80%" type="text" name="texte" id="message" /><br />
+        <label for="message">Message</label> :  <input type="text" name="texte" id="message" /><br />
         <input type="hidden" name="numTicketURL" value="<?php echo $_GET['ticket'] ?>" />
-        <input style="font-size:1.5vw; border-radius: 3vw; padding: 0.5vw 1vw; border: 0.15vw solid #3E4866; margin-left: 80%; margin-top: 0.5vw;" type="submit" value="Envoyer" />
+        <input type="submit" value="Envoyer" />
 	</p>
     </form>
 
@@ -46,10 +45,10 @@ $reponse = $bdd->query('SELECT adresseMail, texte, numTicket FROM message ORDER 
 while ($donnees = $reponse->fetch()){
     if ($donnees['numTicket'] == $_GET["ticket"])
 {
-        if ($donnees['adresseMail'] == 'Administrateur Prisep'){
+	if ($donnees['adresseMail'] == 'Administrateur Prisep'){
 	    echo '<p style="color:#FF0000";><strong>' . $donnees['adresseMail'] . '</strong> : ' . $donnees['texte'] . '</p>';
         }
-        else{
+    else{
             echo '<p><strong>' . $donnees['adresseMail'] . '</strong> : ' . $donnees['texte'] . '</p>';
         }
 }
@@ -57,11 +56,5 @@ while ($donnees = $reponse->fetch()){
 $reponse->closeCursor();
 
 ?>
-    <!-- <form action="minichat.php?ticket=<?php $_GET['ticket'] ?>">
-    <p>
-    <input style="font-size:1.5vw; border-radius: 3vw; padding: 0.5vw 1vw; border: 0.15vw solid #3E4866; margin-left: 80%; margin-top: 0.5vw;" type="submit" value="Recevoir" />
-    </p>
-    </form> -->
     </body>
-    <?php include("Footer.html");?>
 </html>
