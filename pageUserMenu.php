@@ -24,7 +24,7 @@ session_start(); // On démarre la session AVANT toute chose
     }
     $requeteSQL = $bddAPP->query(
       'SELECT m.*, p.nomPiece, p.idPiece FROM maison m
-      INNER JOIN piece p
+      LEFT JOIN piece p
       ON p.idResidence = m.idResidence
       WHERE m.adresseMail="'.$_SESSION['adresseMail'].'"'
       );
@@ -48,8 +48,8 @@ session_start(); // On démarre la session AVANT toute chose
             $donnee = $requeteSQL->fetch();
           }
           ?>
-          <form class="addRoomForm" action="validation/addRoom_Validation.php" method="post">
-            <input type="text" name="roomNameInput" required placeholder=" Inscrivez ici le nom de la pièce à ajouter">
+          <form class="addRoomForm" action="validation/addRoom_Validation.php?idResidence=<?= $donnee['idResidence']?>" method="post">
+            <input type="text" name="roomNameInput" required placeholder="Inscrivez ici le nom de la pièce à ajouter">
             <input type="image" src="stylesheet/ICON_PLUS.png"   value="">
           </form>
         </div>
