@@ -23,10 +23,10 @@ session_start(); // On démarre la session AVANT toute chose
       die('error:'.$e->getMessage());
     }
     $requeteSQL = $bddAPP->query(
-      'SELECT m.*, p.nomPiece, p.idPiece FROM maison m
+      'SELECT m.*, p.* FROM maison m
       LEFT JOIN piece p
       ON p.idResidence = m.idResidence
-      WHERE m.adresseMail="'.$_SESSION['adresseMail'].'"'
+      WHERE m.adresseMail="'.$_SESSION['adresseMail'].'" ORDER BY m.idResidence '
       );
       
     $donnee = $requeteSQL->fetch();
@@ -37,8 +37,9 @@ session_start(); // On démarre la session AVANT toute chose
         <p class="adresse">Adresse: <?= $donnee['adresse'] ?></p>
         <div class="divFlexDisplay">
           <?php 
-          $currentResidence=$donnee['nomResidence'];
-          while( $donnee['nomResidence']==$currentResidence ){
+          $currentResidenceName=$donnee['nomResidence'];
+          $currentResidenceId=$donnee['idResidence'];
+          while( $donnee['nomResidence']==$currentResidenceName ){
           ?>
             <p class="nomPiece"><a style="text-decoration:none;" href="pageMultiprise.php?idResidence=<?= $donnee['idResidence'].'&idPiece='.$donnee['idPiece']?>">
             <?= $donnee['nomPiece']?></a></p>
@@ -48,7 +49,7 @@ session_start(); // On démarre la session AVANT toute chose
             $donnee = $requeteSQL->fetch();
           }
           ?>
-          <form class="addRoomForm" action="validation/addRoom_Validation.php?idResidence=<?= $donnee['idResidence']?>" method="post">
+          <form class="addRoomForm" action="validation/addRoom_Validation.php?idResidence=<?=$currentResidenceId?>" method="post">
             <input type="text" name="roomNameInput" required placeholder="Inscrivez ici le nom de la pièce à ajouter">
             <input type="image" src="stylesheet/ICON_PLUS.png"   value="">
           </form>
