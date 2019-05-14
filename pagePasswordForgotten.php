@@ -13,8 +13,8 @@ if(!empty($_POST)){
             $valid = false;
             $er_mail = "Il faut mettre un mail";
         }
-// On génère un mot de passe à l'aide de la fonction RAND de PHP
-                        $new_pass = rand();
+                        $new_pass = rand(); // On génère un mot de passe à l'aide de la fonction RAND de PHP
+
 
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
                         $new_pass_crypt = crypt($new_pass, "$6$rounds=5000$macleapersonnaliseretagardersecret$");
@@ -31,10 +31,12 @@ if(!empty($_POST)){
                         $header .= "Content-Transfer-Encoding: 8bit";
 
                         //===== Contenu de votre message
-                        $contenu =  "<html>".
+                        $contenu = 
+                         "<html>".
                             "<body>".
+                            <img src="styleSheet/image/logoSite"
                             "<p style='text-align: center; font-size: 18px'><b>Bonjour</b>,</p><br/>".
-                            "<p style='text-align: justify'><i><b>Nouveau mot de passe : </b></i>".$new_pass."</p><br/>".
+                            "<p style='text-align: justify'><i><b>Voici votre nouveau mot de passe : </b></i>".$new_pass."</p><br/>".
                             "</body>".
                             "</html>";
                         //===== Envoi du mail
