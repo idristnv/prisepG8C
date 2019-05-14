@@ -10,7 +10,6 @@
         <h1>FAQ</h1>
         <br>
         <br>
-        <br>
         <h2>Comment gérer mon compte Prisep?</h2>
         <br>
         <p>Il vous faut tout d'abord créer un compte client. Une fois le compte créé, vous devez définir votre adresse et les différentes pièces où se situent les multiprises.</p>

@@ -1,3 +1,5 @@
+<?php include("barre de navigation.html"); ?>
+
 <?php
 session_start();
 if(!empty($_POST)){
@@ -46,14 +48,13 @@ if(!empty($_POST)){
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheet/pagePasswordForgotten.css">
 
         <title>Mot de passe oublié</title>
     </head>
     <body>
-        <h1>Mot de passe oublié</h1>
+        
+
         <br>
         <br>
 
