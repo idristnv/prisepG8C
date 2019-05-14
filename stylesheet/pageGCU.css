@@ -1,6 +1,7 @@
 body{
     background: linear-gradient(#686f77, white);
     background-repeat: no-repeat;
+    
 }
   h1{
     width: 90%;
@@ -20,10 +21,7 @@ body{
 
   p{
     text-align: center;
-    font-size: 2em;
+    font-size: 2vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
   }
 
-
-footer{
-text-align: center;
-}
