@@ -32,8 +32,8 @@
                         //===== Contenu de votre message
                         $contenu =  "<html>".
                             "<body>".
-                            "<p style='text-align: center; font-size: 18px'><b>Bonjour Mr, Mme".$_POST['nom']."</b>,</p><br/>".
-                            "<p style='text-align: justify'><i><b>Voic vouveau mot de passe : </b></i>".$new_pass."</p><br/>".
+                            "<p style='text-align: center; font-size: 18px'><b>Bonjour</b>,</p><br/>".
+                            "<p style='text-align: justify'><i><b>Voic votre nouveau mot de passe : </b></i>".$new_pass."</p><br/>".
                             "</body>".
                             "</html>";
                         //===== Envoi du mail
