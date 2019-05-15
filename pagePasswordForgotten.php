@@ -12,7 +12,7 @@
             if(empty($mail)){
                 $valid = false;
                 $er_mail = "Il faut mettre un mail";
-            
+            }
                         // On génère un mot de passe à l'aide de la fonction RAND de PHP
                         $new_pass = rand();
 
@@ -34,12 +34,11 @@
                         $contenu =  "<html>".
                             "<body>".
                             "<p style='text-align: center; font-size: 18px'><b>Bonjour</b>,</p><br/>".
-                            "<p style='text-align: justify'><i><b>Voici vouveau mot de passe : </b></i>".$new_pass."</p><br/>".
+                            "<p style='text-align: justify'><i><b>Voici votre nouveau mot de passe : </b></i>".$new_pass."</p><br/>".
                             "</body>".
                             "</html>";
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
-            }
         }
     }
 ?>
