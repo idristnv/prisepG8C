@@ -1,7 +1,7 @@
 <?php include("barre de navigation.html"); ?>
 <?php
 
-    if(!empty($_POST)){
+    /*if(!empty($_POST)){
         extract($_POST);
         $valid = true;
 
@@ -43,7 +43,7 @@
                 }       
             }
         }
-    }
+    }*/
 ?>
 
 <!DOCTYPE html>
