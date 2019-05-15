@@ -1,7 +1,7 @@
 <?php include("barre de navigation.html"); ?>
 <?php
 
-    if(!empty($_POST)){
+    /*if(!empty($_POST)){
         extract($_POST);
         $valid = true;
 
@@ -11,7 +11,7 @@
             // Si le mail est vide alors on ne traite pas
             if(empty($mail)){
                 $valid = false;
-                $er_mail = "Il faut mettre un mail";
+                $er_mail = "Il faut mettre un mail";*/
             
                         // On génère un mot de passe à l'aide de la fonction RAND de PHP
                         $new_pass = rand();
