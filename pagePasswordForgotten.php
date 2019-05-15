@@ -1,7 +1,6 @@
 <?php include("barre de navigation.html"); ?>
 <?php
-    session_start();
-    
+
     if(!empty($_POST)){
         extract($_POST);
         $valid = true;
@@ -40,7 +39,6 @@
                             "</html>";
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
-                        exit;
             }
         }
     }
