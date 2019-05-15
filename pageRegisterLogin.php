@@ -65,7 +65,7 @@ session_start();
           <label>Mot de passe:</label>
           <input type="password" name="inputMotDePasse" placeholder="Minimum 8 caractères" required minlength="8">
 
-          <div><p><a href="pageGCU.html" style="color: blue;">Conditions générales d'utilisation</a></p>
+          <div><p><a href="pageGCU.php" style="color: blue;">Conditions générales d'utilisation</a></p>
 
           <input type="checkbox" name=checkboxGcu required>J'ai lu et j'accepte les conditions générales d'utilisation.</div>
           <br>
