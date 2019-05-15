@@ -3,8 +3,6 @@
     session_start();
     $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root','root');
 
-    }
-
     if(!empty($_POST)){
         extract($_POST);
         $valid = true;
