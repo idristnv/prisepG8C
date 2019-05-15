@@ -11,6 +11,7 @@ session_start();
 
 </head>
 <body>
+<?php include("navigationBar.html");?>
 <div class="divFlexDisplay"> <!--pour le responsive -->
     <?php
     try{
@@ -21,15 +22,14 @@ session_start();
     $requeteSQL = $bddAPP->query(
       'SELECT mu.*, p.nomPiece, m.nomResidence
       FROM multiprise mu
-      INNER JOIN piece p ON p.idPiece = mu.idpiece
-      INNER JOIN maison m ON p.idResidence = m.idResidence
+      RIGHT JOIN piece p ON p.idPiece = mu.idpiece
+      RIGHT JOIN maison m ON p.idResidence = m.idResidence
       WHERE m.adresseMail="'.$_SESSION['adresseMail'].'" 
       AND m.idResidence="'.$_GET['idResidence'].'" 
       AND p.idPiece="'.$_GET['idPiece'].'"'
       );
       
     $donnee = $requeteSQL->fetch();
-    print_r($donnee);
     ?>
     <div id="divMaisonPiece">
       <h1><?=$donnee['nomResidence'].'<br>'.$donnee['nomPiece']?></h2>
@@ -45,8 +45,7 @@ session_start();
           <button ><img src="stylesheet/image/iconOnOff" alt="icone On/Off"></button>
           <!-- changer celui la pour les alertes -->
           <button><?php echo '<img src="stylesheet/image/iconAlertOn" alt="notification activé">'; ?></button>
-          <p>Total d'heures allumés: <?php echo $donnee['totalTempsAllume'] ?>
-          </p>
+          <p>Allumé depuis: <?= $donnee['switchedOnAt'] ?></p> <!--date("G:i:s")-->
           <?php 
             if($donnee['capteurLuminosite']){
               echo '<img src="stylesheet/image/iconLightOn" alt="lumière détecté">';
@@ -63,22 +62,22 @@ session_start();
             }else{
               echo '<img src="stylesheet/image/iconTemperatureRed" alt="temperature critique">';
             }
-            ?>
+          ?>
         </div> 
             
         <div class="divFlexDisplay">
-          <?php 
-          $currentMultiprise=$donnee['idMultiprise'];
-          while( $donnee['idMultiprise']==$currentMultiprise ){
-          ?>
-            <!-- faire ici le include pour les prises -->
-            <p>lololol</p>
             <?php
-            $donnee = $requeteSQL->fetch();
-          } 
-          ?>
+            for($i=1;$i<=3;$i++){
+            ?>
+            <div class="divPlug">
+              <p>prise <?=$donnee['plug'.$i.'State']  ?> </p>
+              <a href=""><img src="" alt=""></a>
+            </div>
+            <?php 
+            }
+            ?>
         </div>
-
+       <?php $donnee = $requeteSQL->fetch();?> 
       </div>
   
     <?php

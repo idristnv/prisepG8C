@@ -6,9 +6,9 @@ body{
 }
 
 h1{
-  width: 90%;
-  margin:5%;
-  margin-top: 0px;
+  width: 80%;
+  margin:10%;
+  margin-top: 10px;
   margin-bottom: 0px;
   text-align:center;
   font-size: 6vw;
@@ -28,7 +28,8 @@ h1{
   margin: 0px;
 }
 
-.divMaison {
+.divHome
+ {
 width: 80%;
 margin: 10%;
 margin-top:10px;
@@ -40,7 +41,8 @@ padding: 0px; /* pour les background coloré*/
 overflow: hidden;
 }
 
-.divMaison h2 {
+.divHome
+ h2 {
   text-align: center;
   font-size: 2em;
   color:#787b84;
@@ -61,7 +63,7 @@ overflow: hidden;
   border-bottom: 3px solid #3e4866;
 }
 
-#divAjoutMaison{
+#divAddHome{
   width: 80%;
   margin: 10%;
   margin-top:10px;
@@ -72,7 +74,7 @@ overflow: hidden;
   font-size: 1.2em;
 }
 
-#divAjoutMaison img{
+#divAddHome img{
   float:left;
   width: 100px;
 }
@@ -110,15 +112,16 @@ overflow: hidden;
 }
 
 @media screen and (min-width: 1200px) {
-  .divMaison {
+  .divHome
+   {
     width: 40%;
     padding:0%;
     margin: 4%;
   }
-  #divAjoutMaison{
+  #divAddHome{
     font-size: 2vw;
   }
-  #divAjoutMaison img{
+  #divAddHome img{
     width:160px;
   }
 }

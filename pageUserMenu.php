@@ -11,7 +11,7 @@ session_start(); // On démarre la session AVANT toute chose
 </head>
 <body>
 
-  <?php //include("barre de navigation.html");?>
+  <?php include("navigationBar.html");?>
 
   <h1>Vos demeures</h1>
 
@@ -32,7 +32,7 @@ session_start(); // On démarre la session AVANT toute chose
     $donnee = $requeteSQL->fetch();
     while($donnee){
     ?>
-      <div class="divMaison" >
+      <div class="divHome" >
         <h2><?= $donnee['nomResidence'] ?></h2>
         <p class="adresse">Adresse: <?= $donnee['adresse'] ?></p>
         <div class="divFlexDisplay">
@@ -61,7 +61,7 @@ session_start(); // On démarre la session AVANT toute chose
     $requeteSQL->closeCursor();
     ?>
 
-    <div id="divAjoutMaison">
+    <div id="divAddHome">
       <!-- on ajoute la possibilité d'ajouté une maison a la toute fin -->
       <a href="pageAddHome.php"><img src="stylesheet/ICON_PLUS.png" 
       alt="ajouter une maison" ></a>

@@ -10,7 +10,7 @@
     </head>
 
     <body>
-    <?php include("barre de navigation.html");?>
+    <?php include("navigationBar.html");?>
       <br/>
       <br/>
       <br/>
