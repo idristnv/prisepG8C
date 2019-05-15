@@ -1,8 +1,5 @@
 <?php include("barre de navigation.html"); ?>
 <?php
-    session_start();
-    $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root','root');
-
     if(!empty($_POST)){
         extract($_POST);
         $valid = true;
@@ -43,12 +40,10 @@
                         mail($to, $objet, $contenu, $header);
                         $DB->insert("UPDATE utilisateur SET mdp = ?, n_mdp = 1 WHERE mail = ?", 
                             array($new_pass_crypt, $verification_mail['mail']));
-                    }   
-                }       
-                exit;
-            }
         }
     }
+}
+
 ?>
 
 <!DOCTYPE html>
