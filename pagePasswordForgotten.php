@@ -1,17 +1,18 @@
+<?php include("barre de navigation.html"); ?>
 <?php
-session_start();
 if(!empty($_POST)){
     extract($_POST);
     $valid = true;
-    if (isset($_POST['oublie'])){
-        $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe
 
-        // Si le mail est vide alors on ne traite pas
-        if(empty($mail)){
-            $valid = false;
-            $er_mail = "Il faut mettre un mail";
-        }
-// On génère un mot de passe à l'aide de la fonction RAND de PHP
+        if (isset($_POST['oublie'])){
+            $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
+        
+            // Si le mail est vide alors on ne traite pas
+            if(empty($mail)){
+                $valid = false;
+                $er_mail = "Il faut mettre un mail";
+            
+                        // On génère un mot de passe à l'aide de la fonction RAND de PHP
                         $new_pass = rand();
 
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
@@ -32,28 +33,27 @@ if(!empty($_POST)){
                         $contenu =  "<html>".
                             "<body>".
                             "<p style='text-align: center; font-size: 18px'><b>Bonjour</b>,</p><br/>".
-                            "<p style='text-align: justify'><i><b>Nouveau mot de passe : </b></i>".$new_pass."</p><br/>".
+                            "<p style='text-align: justify'><i><b>Voic vouveau mot de passe : </b></i>".$new_pass."</p><br/>".
                             "</body>".
                             "</html>";
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
-                        exit;
+            }
+        }
     }
-}
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheet/pagePasswordForgotten.css">
 
         <title>Mot de passe oublié</title>
     </head>
     <body>
-        <h1>Mot de passe oublié</h1>
+        
+
         <br>
         <br>
 
