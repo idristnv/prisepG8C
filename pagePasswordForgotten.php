@@ -1,15 +1,14 @@
 <?php include("barre de navigation.html"); ?>
 <?php
 
-
         if (isset($_POST['oublie'])){
             $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
-
+        
             // Si le mail est vide alors on ne traite pas
             if(empty($mail)){
                 $valid = false;
                 $er_mail = "Il faut mettre un mail";
-            }
+            
                         // On génère un mot de passe à l'aide de la fonction RAND de PHP
                         $new_pass = rand();
 
@@ -36,8 +35,8 @@
                             "</html>";
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
+            }
         }
-    }
 ?>
 
 <!DOCTYPE html>
