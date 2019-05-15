@@ -1,8 +1,10 @@
 <?php include("barre de navigation.html"); ?>
 <?php
-if(!empty($_POST)){
-    extract($_POST);
-    $valid = true;
+    session_start();
+    
+    if(!empty($_POST)){
+        extract($_POST);
+        $valid = true;
 
         if (isset($_POST['oublie'])){
             $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
@@ -16,7 +18,7 @@ if(!empty($_POST)){
                         $new_pass = rand();
 
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
-                        $new_pass_crypt = crypt($new_pass, "$6$rounds=5000$macleapersonnaliseretagardersecret$");
+                        //$new_pass_crypt = crypt($new_pass, "$6$rounds=5000$macleapersonnaliseretagardersecret$");
                         // $new_pass_crypt = crypt($new_pass, "VOTRE CLÉ UNIQUE DE CRYPTAGE DU MOT DE PASSE");
 
                         $objet = 'Nouveau mot de passe';
@@ -38,6 +40,7 @@ if(!empty($_POST)){
                             "</html>";
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
+                        exit;
             }
         }
     }
