@@ -32,18 +32,15 @@
                         //===== Contenu de votre message
                         $contenu =  "<html>".
                             "<body>".
-                            "<p style='text-align: center; font-size: 18px'><b>Bonjour Mr, Mme".$verification_mail['nom']."</b>,</p><br/>".
+                            "<p style='text-align: center; font-size: 18px'><b>Bonjour Mr, Mme".$_POST['nom']."</b>,</p><br/>".
                             "<p style='text-align: justify'><i><b>Voic vouveau mot de passe : </b></i>".$new_pass."</p><br/>".
                             "</body>".
                             "</html>";
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
-                        $DB->insert("UPDATE utilisateur SET mdp = ?, n_mdp = 1 WHERE mail = ?", 
-                            array($new_pass_crypt, $verification_mail['mail']));
         }
     }
 }
-
 ?>
 
 <!DOCTYPE html>
