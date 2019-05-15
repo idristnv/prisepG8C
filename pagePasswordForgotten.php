@@ -1,6 +1,6 @@
 <?php include("barre de navigation.html"); ?>
 <?php
-
+session_start()
         if (isset($_POST['oublie'])){
             $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
         
@@ -35,6 +35,7 @@
                             "</html>";
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
+                        exit()
             }
         }
 ?>
