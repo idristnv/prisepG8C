@@ -1,5 +1,6 @@
 <?php include("barre de navigation.html"); ?>
 <?php
+$bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', 'root');
 
     if(!empty($_POST)){
         extract($_POST);
