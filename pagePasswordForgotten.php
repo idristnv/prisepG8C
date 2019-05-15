@@ -1,5 +1,6 @@
 <?php include("barre de navigation.html"); ?>
 <?php
+
     if(!empty($_POST)){
         extract($_POST);
         $valid = true;
@@ -33,14 +34,16 @@
                         $contenu =  "<html>".
                             "<body>".
                             "<p style='text-align: center; font-size: 18px'><b>Bonjour</b>,</p><br/>".
-                            "<p style='text-align: justify'><i><b>Voic votre nouveau mot de passe : </b></i>".$new_pass."</p><br/>".
+                            "<p style='text-align: justify'><i><b>Voic vouveau mot de passe : </b></i>".$new_pass."</p><br/>".
                             "</body>".
                             "</html>";
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
+                    }   
+                }       
+            }
         }
     }
-}
 ?>
 
 <!DOCTYPE html>
