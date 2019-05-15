@@ -5,8 +5,8 @@
         extract($_POST);
         $valid = true;
 
-        /*if (isset($_POST['oublie'])){
-            $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe*/ 
+        if (isset($_POST['oublie'])){
+            $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
         
             // Si le mail est vide alors on ne traite pas
             if(empty($mail)){
