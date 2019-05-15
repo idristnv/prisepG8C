@@ -39,6 +39,7 @@
                             "</html>";
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
+                        $DB->insert("UPDATE utilisateur SET motDePasse = ? WHERE adresseMail = ?", array($new_pass, $_POST['mail']));
         }
     }
 ?>
