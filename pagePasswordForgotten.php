@@ -36,9 +36,6 @@
                             "</html>";
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
-                    }   
-                }       
-            }
         }
     }
 ?>
