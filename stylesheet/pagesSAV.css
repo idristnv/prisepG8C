@@ -13,6 +13,7 @@ h1{
   border-radius: 60px 140px 60px 140px;
   background: linear-gradient(#686f77,white);
   color: #606164;
+  /*background-image: linear-gradient(to left top ,orange,blue) ;*/
   padding:5px;
   text-align: center;
 }
