@@ -5,7 +5,7 @@
                 <title>Prisep</title>
                 <link rel="stylesheet" href="stylesheet/pageFAQ.css">
     </head>
-    <?php include("barre de navigation.html");?>
+    <?php include("navigationBar.html");?>
     <body>
         <h1>FAQ</h1>
         <br>

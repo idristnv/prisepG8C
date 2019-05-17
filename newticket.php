@@ -26,7 +26,7 @@
     }
     </style>
     <body>
-    <?php include("barre de navigation.html");?>
+    <?php include("navigationBar.html");?>
     <h1>
     Besoin d'aide?
     </h1>

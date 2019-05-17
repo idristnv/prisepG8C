@@ -12,7 +12,7 @@
     }
     </style>
     <body>
-    <?php include("barre de navigation.html");?>
+    <?php include("navigationBar.html");?>
 
     
     <form action="minichat_post.php?ticket=<?php $_GET['ticket'] ?>" method="post">
