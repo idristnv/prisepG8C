@@ -42,7 +42,7 @@ session_start();
         <!-- ce qu'on affiche de la multiprise -->
         <h2 class="nomMultiprise"><?=$donnee['nomMultiprise'] ?></h2>
         <div class="divIcones">
-          <button ><img src="stylesheet/image/iconOnOff" alt="icone On/Off"></button>
+          <button ><img src="stylesheet/image/iconOn" alt="icone On/Off"></button>
           <!-- changer celui la pour les alertes -->
           <button><?php echo '<img src="stylesheet/image/iconAlertOn" alt="notification activé">'; ?></button>
           <p>Allumé depuis: <?= $donnee['switchedOnAt'] ?></p> <!--date("G:i:s")-->
@@ -65,13 +65,13 @@ session_start();
           ?>
         </div> 
             
-        <div class="divFlexDisplay">
+        <div style="display:flex">
             <?php
             for($i=1;$i<=3;$i++){
             ?>
             <div class="divPlug">
-              <p>prise <?=$donnee['plug'.$i.'State']  ?> </p>
-              <a href=""><img src="" alt=""></a>
+              <p>prise <?=$i ?> </p>
+              <a href=""> <img <?= "src='stylesheet/image/iconOn'" ?> > </a>
             </div>
             <?php 
             }

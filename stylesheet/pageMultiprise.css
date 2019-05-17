@@ -68,6 +68,17 @@ h1{
   margin: 0px;
 }
 
+.divPlug {
+  width: 30%;
+  text-align: center;
+  height: auto;
+  margin: auto;
+}
+.divPlug img {
+  width: 100%;
+  height: 100%;
+}
+
 
 #divAjoutMultiprise{
   width: 80%;
