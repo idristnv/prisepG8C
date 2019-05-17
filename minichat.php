@@ -17,7 +17,6 @@
     
     <form action="minichat_post.php?ticket=<?php $_GET['ticket'] ?>" method="post">
         <p>
-        <!-- <label for="pseudo">Pseudo</label> : <input type="text" name="adresseMail" id="pseudo" /><br /> -->
         <label for="message" style="font-size:1.5vw;">Message</label> :  <input style="height:40px; width:80%" type="text" name="texte" id="message" /><br />
         <input type="hidden" name="numTicketURL" value="<?php echo $_GET['ticket'] ?>" />
         <input style="font-size:1.5vw; border-radius: 3vw; padding: 0.5vw 1vw; border: 0.15vw solid #3E4866; margin-left: 80%; margin-top: 0.5vw;" type="submit" value="Envoyer" />

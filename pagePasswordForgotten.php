@@ -1,8 +1,10 @@
 <?php include("barre de navigation.html"); ?>
 <?php
-if(!empty($_POST)){
-    extract($_POST);
-    $valid = true;
+$bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', 'root');
+
+    if(!empty($_POST)){
+        extract($_POST);
+        $valid = true;
 
         if (isset($_POST['oublie'])){
             $mail = htmlentities(strtolower(trim($mail))); // On récupère le mail afin d envoyer le mail pour la récupèration du mot de passe 
@@ -11,12 +13,12 @@ if(!empty($_POST)){
             if(empty($mail)){
                 $valid = false;
                 $er_mail = "Il faut mettre un mail";
-            
+            }
                         // On génère un mot de passe à l'aide de la fonction RAND de PHP
                         $new_pass = rand();
 
                         // Le mieux serait de générer un nombre aléatoire entre 7 et 10 caractères (Lettres et chiffres)
-                        $new_pass_crypt = crypt($new_pass, "$6$rounds=5000$macleapersonnaliseretagardersecret$");
+                        //$new_pass_crypt = crypt($new_pass, "$6$rounds=5000$macleapersonnaliseretagardersecret$");
                         // $new_pass_crypt = crypt($new_pass, "VOTRE CLÉ UNIQUE DE CRYPTAGE DU MOT DE PASSE");
 
                         $objet = 'Nouveau mot de passe';
@@ -33,12 +35,12 @@ if(!empty($_POST)){
                         $contenu =  "<html>".
                             "<body>".
                             "<p style='text-align: center; font-size: 18px'><b>Bonjour</b>,</p><br/>".
-                            "<p style='text-align: justify'><i><b>Voic vouveau mot de passe : </b></i>".$new_pass."</p><br/>".
+                            "<p style='text-align: justify'><i><b>Voici votre nouveau mot de passe : </b></i>".$new_pass."</p><br/>".
                             "</body>".
                             "</html>";
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
-            }
+                        $DB->insert("UPDATE utilisateur SET motDePasse = ? WHERE adresseMail = ?", array($new_pass, $_POST['mail']));
         }
     }
 ?>
