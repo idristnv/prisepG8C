@@ -31,12 +31,12 @@
 
                 <label> Numero de série :</label>
                 <input type="text" name="NumeroDeSerie" required
-                minlength="4" maxlength="200" size="75" placeholder="Saisissez l'adresse de votre domicile">
+                minlength="4" maxlength="200" size="75" placeholder="Saisissez le numéro de série de votre multiprise">
 
             <br/> <br/> <br/>
 
             <label> Nom de la multiprise :</label>
-            <input type="text" name="NomMultiprise" required minlength="3" maxlength="20" size="25" placeholder="Entrez le nom de la Ville">
+            <input type="text" name="NomMultiprise" required minlength="3" maxlength="20" size="25" placeholder="Entrez le nom de votre multiprise">
 
             <br/> <br/> <br/>
 
