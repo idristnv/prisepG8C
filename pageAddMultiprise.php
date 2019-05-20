@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 
 <html>
-
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="stylesheet/ajoutPrise.css" />
-
-        <title>Ajout de prise</title>
+        <link rel="stylesheet" href="stylesheet/pageAddMultiprise.css" />
+        <title>Ajouter une multiprise</title>
     </head>
+    <body>
+        <?php include("navigationBar.html"); ?>
 
-<body>
-        <div class="Deroulement">   <!-- c'est genre le scroll quand la souris passe sur le bouton mon compte -->
-            <button class="BtnAjoutMultiprise">Ajouter une multiprise</button>
-            <div class ='listemaison'>
-                    <label for="groupe">Chosir maison:</label>
-                </div>
-            <div class ='listepièce'>
-                    <label for="groupe">Chosir pièce:</label>
-                </div>
-            <div id="nom">
-                    <label for="name"> Numéro de série : </label>
-                       <br>
-                       <div class = 'barre'>
-                       <input type="text" name="name" id="name">
-                       </div>
-            <div id="nom">
-                <label for="name"> Nom multiprise : </label>
-                    <br>
-                    <div class = 'barre'>
-                    <input type="text" name="name" id="name">
-                    </div>
-</div>
-</body>
+
+        <br/> <br/> <br/>
+
+        <div class="AjouterMaison">
+            <h1> Ajouter votre domicile</h1>
+            <form action="validation/pageAddHome_validation.php" method="post">
+
+            <label> Nom  :</label>
+            <input type="text" name="NomMaison" required
+            minlength="1" maxlength="200" size="40" placeholder="Ecrivez ici le nom de votre maison">
+
+            <br/> <br/> <br/>
+
+                <label> Adresse :</label>
+                <input type="text" name="Adresse" required
+                minlength="4" maxlength="200" size="75" placeholder="Saisissez l'adresse de votre domicile">
+
+            <br/> <br/> <br/>
+
+            <label> Ville :</label>
+            <input type="text" name="Ville" required minlength="3" maxlength="20" size="25" placeholder="Entrez le nom de la Ville">
+
+            <br/> <br/> <br/>
+
+            <label> Code Postal :</label>
+            <input type="number" name="CodePostal" required minlength="5" maxlength="5" size="10" placeholder="Ex : 75015">
+
+            <br/> <br/> <br/>
+
+            <label> Nom de la pièce :</label>
+            <input type="text" name="roomNameInput" required maxlength="20" size="30" placeholder="Nom de la pièce où sera la multiprise">
+
+
+
+            <br/> <br/> <br/>
+                <input type="submit" value="Envoyer" style="width:200px">
+            </form>
+
+            
+
+        </div>
+
+        
+    </body>
+    <?php include("Footer.html"); ?>
 </html>
