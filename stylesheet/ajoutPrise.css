@@ -18,3 +18,14 @@
   margin: 0; 
   overflow: hidden;
 }
+
+.listemaison input,
+select {
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 25px;
+}
