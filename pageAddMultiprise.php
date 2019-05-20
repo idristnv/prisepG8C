@@ -23,7 +23,7 @@
             <br/> <br/> <br/>
 
             <label> Nom de la pièce :</label>
-            <input type="text" name="roomNameInput" required maxlength="20" size="30" placeholder="Nom de la pièce où sera la multiprise">
+            <input type="text" name="roomNameInput" required maxlength="200" size="40" placeholder="Nom de la pièce où sera la multiprise">
 
 
 
