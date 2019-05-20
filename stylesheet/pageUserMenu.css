@@ -6,16 +6,17 @@ body{
 }
 
 h1{
-  width: 80%;
+  width: 50%;
   margin:10%;
   margin-top: 10px;
   margin-bottom: 0px;
+  margin-left:25%;
   text-align:center;
-  font-size: 6vw;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+  font-size: 4vw;
+  font-family: 'Segoe UI';
   border-radius: 20px 60px 20px 60px;
-  background: linear-gradient(to right,#406ca5,#1764c6);
-  color: #787b84;
+  background: linear-gradient(#686f77,white);
+  color: #606164;
   /*background-image: linear-gradient(to left top ,orange,blue) ;*/
   text-shadow: white 2px 2px ;
   padding:15px;
