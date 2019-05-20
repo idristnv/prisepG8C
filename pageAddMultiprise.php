@@ -22,6 +22,13 @@
 
             <br/> <br/> <br/>
 
+            <label> Nom de la pièce :</label>
+            <input type="text" name="roomNameInput" required maxlength="20" size="30" placeholder="Nom de la pièce où sera la multiprise">
+
+
+
+            <br/> <br/> <br/>
+
                 <label> Numero de série :</label>
                 <input type="text" name="NumeroDeSerie" required
                 minlength="4" maxlength="200" size="75" placeholder="Saisissez l'adresse de votre domicile">
@@ -33,12 +40,6 @@
 
             <br/> <br/> <br/>
 
-            <label> Nom de la pièce :</label>
-            <input type="text" name="roomNameInput" required maxlength="20" size="30" placeholder="Nom de la pièce où sera la multiprise">
-
-
-
-            <br/> <br/> <br/>
                 <input type="submit" value="Envoyer" style="width:200px">
             </form>
 
