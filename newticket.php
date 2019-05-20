@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,7 +10,7 @@
     {
         text-align:center;
     }
-    h1 
+    h1
     {
         text-align:center;
         float: center;
@@ -32,9 +33,9 @@
     </h1>
 
     <p style="text-align: center; font-size: 1.5vw">
-    Un problème? Une question ? Nos administrateurs peuvent vous aider. 
+    Un problème? Une question ? Nos administrateurs peuvent vous aider.
     <br><br>
-    Il vous suffit de créer un ticket et expliquer votre problème et un administrateur Prisep sera là pour résoudre le problème.  
+    Il vous suffit de créer un ticket et expliquer votre problème et un administrateur Prisep sera là pour résoudre le problème.
     </p>
 
 
@@ -45,13 +46,13 @@
         <!-- <label for="message">Message</label> :  <input type="text" name="texte" id="message" /><br /> -->
 
         <input type="submit" name="bouton ticket" style="font-size:1.5vw; border-radius: 3vw; padding: 0.5vw 1vw; border: 0.15vw solid #3E4866;" value="Creer un ticket"/>
-    
+
 	</p>
     </form>
 
     <h2>Vos tickets existants</h2>
     <!-- <div style="background-color:grey"> -->
- 
+
     <?php
 
     try
@@ -66,9 +67,9 @@
 
 
     $listTicket = $bdd->query('SELECT numTicket, mailUser FROM ticket ORDER BY numTicket ASC');
-   
+
 while($donnTick = $listTicket->fetch() /*and $donntick['mailUser']=='valentinnajean@isep.fr'*/){     //a remplacer par $_SESSION[addresse mail]
-    if ($donnTick['mailUser'] == 'valentinnajean@isep.fr'){
+    if ($donnTick['mailUser'] == $_SESSION['adresseMail'] ){
     ?>
     <div class="divTicketex">
         <a href="minichat.php?ticket=<?php echo $donnTick['numTicket'] ?>" >Ticket numero <?php echo $donnTick['numTicket'] ?></a>

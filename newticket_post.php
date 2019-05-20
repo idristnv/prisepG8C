@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Connexion à la base de données
 try
 {
@@ -11,7 +12,7 @@ catch(Exception $e)
 
 // Insertion du message à l'aide d'une requête préparée
 $req = $bdd->prepare('INSERT INTO ticket (mailUser, mailAdmin) VALUES(?, ?)');
-$req->execute(array('valentinnajean@isep.fr', 'admin@admin.com')); //mails a remplacer par la session de l'individu
+$req->execute(array($_SESSION['adresseMail'], 'admin@admin.com')); //mails a remplacer par la session de l'individu
 $req->closeCursor();
 // Redirection du visiteur vers la page du minichat
 
