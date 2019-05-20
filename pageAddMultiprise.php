@@ -18,12 +18,12 @@
 
             <label> Nom  :</label>
             <input type="text" name="NomMaison" required
-            minlength="1" maxlength="200" size="40" placeholder="Ecrivez ici le nom de votre maison">
+            minlength="1" maxlength="200" size="50" placeholder="Ecrivez ici le nom de votre maison">
 
             <br/> <br/> <br/>
 
             <label> Nom de la pièce :</label>
-            <input type="text" name="roomNameInput" required maxlength="200" size="40" placeholder="Nom de la pièce où sera la multiprise">
+            <input type="text" name="roomNameInput" required maxlength="200" size="50" placeholder="Nom de la pièce où sera la multiprise">
 
 
 
@@ -36,7 +36,7 @@
             <br/> <br/> <br/>
 
             <label> Nom de la multiprise :</label>
-            <input type="text" name="NomMultiprise" required minlength="3" maxlength="20" size="25" placeholder="Entrez le nom de votre multiprise">
+            <input type="text" name="NomMultiprise" required minlength="3" maxlength="20" size="50" placeholder="Entrez le nom de votre multiprise">
 
             <br/> <br/> <br/>
 
