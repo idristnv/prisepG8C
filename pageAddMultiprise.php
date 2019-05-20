@@ -13,7 +13,7 @@
         <br/> <br/> <br/>
 
         <div class="AjouterMaison">
-            <h1> Ajouter votre domicile</h1>
+            <h1> Ajouter votre multiprise</h1>
             <form action="validation/pageAddHome_validation.php" method="post">
 
             <label> Nom  :</label>
@@ -22,19 +22,14 @@
 
             <br/> <br/> <br/>
 
-                <label> Adresse :</label>
-                <input type="text" name="Adresse" required
+                <label> Numero de série :</label>
+                <input type="text" name="NumeroDeSerie" required
                 minlength="4" maxlength="200" size="75" placeholder="Saisissez l'adresse de votre domicile">
 
             <br/> <br/> <br/>
 
-            <label> Ville :</label>
-            <input type="text" name="Ville" required minlength="3" maxlength="20" size="25" placeholder="Entrez le nom de la Ville">
-
-            <br/> <br/> <br/>
-
-            <label> Code Postal :</label>
-            <input type="number" name="CodePostal" required minlength="5" maxlength="5" size="10" placeholder="Ex : 75015">
+            <label> Nom de la multiprise :</label>
+            <input type="text" name="NomMultiprise" required minlength="3" maxlength="20" size="25" placeholder="Entrez le nom de la Ville">
 
             <br/> <br/> <br/>
 
