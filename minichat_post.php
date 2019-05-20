@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Connexion à la base de données
 try
 {
@@ -15,7 +16,7 @@ $req = $bdd->prepare('INSERT INTO message (adresseMail, numTicket, texte) VALUES
 
 while ($dernierticket = $ticketfinal->fetch()){
         if ($dernierticket['numTicket'] == $_POST['numTicketURL']){
-                $req->execute(array('valentinnajean@isep.fr', $dernierticket['numTicket'], $_POST['texte'])); //mail a remplacer par la session de l'individu
+                $req->execute(array($_SESSION['adresseMail'], $dernierticket['numTicket'], $_POST['texte'])); //mail a remplacer par la session de l'individu
         }
 }
 

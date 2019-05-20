@@ -1,3 +1,4 @@
+<?php  ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +15,7 @@
     <body>
     <?php include("navigationBar.html");?>
 
-    
+
     <form action="minichat_post.php?ticket=<?php $_GET['ticket'] ?>" method="post">
         <p>
         <label for="message" style="font-size:1.5vw;">Message</label> :  <input style="height:40px; width:80%" type="text" name="texte" id="message" /><br />
