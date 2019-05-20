@@ -15,7 +15,7 @@ session_start();
 <div class="divFlexDisplay"> <!--pour le responsive -->
     <?php
     try{
-      $bddAPP = new PDO('mysql:host=localhost;dbname=APP;charset=utf8','root','root',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+      $bddAPP = new PDO('mysql:host=localhost;dbname=APP;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     }catch (Exception $e){
       die('error:'.$e->getMessage());
     }
