@@ -1,31 +1,28 @@
+
 * {
     font-family: Trebuchet MS;
     }
-
-.Deroulement {
-    float: right;
-    overflow: hidden;
-}
-
-.BtnAjoutMultiprise {
-    font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 16px 35px;
-  background-color: inherit;
-  font-family: inherit; 
-  margin: 0; 
-  overflow: hidden;
-}
-
-.listemaison input,
-select {
-    width: 50%;
-    margin: 5px;
-    padding: 5px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    height: 25px;
-}
+    
+    body{
+      background: linear-gradient(#686f77,white);
+    }
+    
+    .AjouterMaison{
+      width: 40%;
+      margin:5%;
+      padding:3%;
+      margin-left: 350px;
+      padding-top:0px;
+      border: solid #3e4866;
+      border-radius: 3vw ;
+      background-color: white;
+      color: #3e4866;
+    
+    }
+    
+    label {
+        font-size: 1.2em;
+        padding: 4px;
+        display: block;
+        font: 1.2rem 'Trebuchet MS', sans-serif; color: black; font-weight: bold;
+    }
