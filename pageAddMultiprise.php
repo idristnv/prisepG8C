@@ -31,7 +31,7 @@
 
                 <label> Numero de série :</label>
                 <input type="text" name="NumeroDeSerie" required
-                minlength="4" maxlength="200" size="50" placeholder="Saisissez le numéro de série de votre multiprise">
+                minlength="4" maxlength="200" size="50" placeholder="Saisissez le numéro de série de votre multiprise" font-size=1.4em>
 
             <br/> <br/> <br/>
 
