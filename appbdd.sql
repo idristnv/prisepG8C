@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 20 mai 2019 à 09:06
+-- Généré le :  lun. 20 mai 2019 à 09:26
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -43,10 +43,10 @@ CREATE TABLE IF NOT EXISTS `maison` (
 --
 
 INSERT INTO `maison` (`idResidence`, `nomResidence`, `adresse`, `adresseMail`) VALUES
-(1, 'ISEP', '28 rue notre dame des champs \r\n75000 PARIS', 'nchoban@yahoo.fr'),
-(2, 'Maison Courbevoie', '9 rue moliere', 'nchoban@yahoo.fr'),
+(1, 'ISEP', '28 rue notre dame des champs \r\n75000 PARIS', 'nchobadsvdsvn@yahoo.fr'),
+(2, 'Maison Courbevoie', '9 rue moliere', 'nchobadsvdsvn@yahoo.fr'),
 (3, 'mon appartement', '6 rue Jean Maridor 75015\r\nParis CEDEX ', 'theo.esquerre@isep.fr'),
-(35, 'maison de vacance', '5 rue malard 86000 Poitier', 'nchoban@yahoo.fr');
+(35, 'maison de vacance', '5 rue malard 86000 Poitier', 'nchobadsvdsvn@yahoo.fr');
 
 -- --------------------------------------------------------
 
@@ -173,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 
 INSERT INTO `utilisateur` (`adresseMail`, `nom`, `prenom`, `motDePasse`, `dateDeNaissance`, `role`) VALUES
 ('najVal@gmail.com', 'Najean', 'Valentin', '$2y$10$2mTRQUt8kTWLAVoo/DGzYum6xvxFAkXTKJXQUbmsCBvAmI4/GbOB6', '2001-04-03', 'client'),
-('nchoban@yahoo.fr', 'Choban', 'Mykola', '$2y$10$VzKuayGq5VFyZ7IE/19BIOmMeGzJltK7ySfqyOF1Ann5hpbMxza72', '1997-07-31', 'administrateur'),
+('nchobadsvdsvn@yahoo.fr', 'Choban', 'Mykola', '$2y$10$VzKuayGq5VFyZ7IE/19BIOmMeGzJltK7ySfqyOF1Ann5hpbMxza72', '1997-07-31', 'administrateur'),
 ('theo.esquerre@isep.fr', 'Esquerre', 'Theo', '$2y$10$pWsYh6xP.qVfZaujNCda2eAaJxIif8UkmYWWDzk3xrAWwZKRm7V1u', '1998-04-04', 'client');
 
 --
@@ -184,7 +184,7 @@ INSERT INTO `utilisateur` (`adresseMail`, `nom`, `prenom`, `motDePasse`, `dateDe
 -- Contraintes pour la table `maison`
 --
 ALTER TABLE `maison`
-  ADD CONSTRAINT `mailRestrict` FOREIGN KEY (`adresseMail`) REFERENCES `utilisateur` (`adresseMail`);
+  ADD CONSTRAINT `mailRestrict` FOREIGN KEY (`adresseMail`) REFERENCES `utilisateur` (`adresseMail`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
