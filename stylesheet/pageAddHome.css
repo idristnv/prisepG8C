@@ -22,9 +22,9 @@ body{
 }
 
 label {
-    font-size: 1.4em;
-    padding: 4px;
+    font-size: 1.2em;
+    padding: 6px;
     display: block;
-    font: 1.4rem 'Trebuchet MS', sans-serif; color: black; font-weight: bold;
+    font: 1.2rem 'Trebuchet MS', sans-serif; color: black; font-weight: bold;
 }
 
