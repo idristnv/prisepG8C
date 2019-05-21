@@ -8,46 +8,21 @@
     </head>
     <body>
         <?php include("navigationBar.html"); ?>
-
-
-        <br/> <br/> <br/>
-
+        <h1>Ajoutez votre multiprise</h1>
         <div class="AjouterMaison">
-            <h1> Ajouter votre multiprise</h1>
             <form action="validation/pageAddHome_validation.php" method="post">
 
-            <label> Nom  :</label>
-            <input type="text" name="NomMaison" required
-            minlength="1" maxlength="200" size="50" placeholder="Ecrivez ici le nom de votre maison">
+            <label>Numero de série :</label>
+            <input type="text" name="idMultiprise" required
+            minlength="8" placeholder="Saisissez le numéro de série de votre multiprise">
 
-            <br/> <br/> <br/>
+            <label>Nom pour la multiprise :</label>
+            <input type="text" name="nomMultiprise" required minlength="3" placeholder="Entrez le nom de votre multiprise">
 
-            <label> Nom de la pièce :</label>
-            <input type="text" name="roomNameInput" required maxlength="200" size="50" placeholder="Nom de la pièce où sera la multiprise">
-
-
-
-            <br/> <br/> <br/>
-
-                <label> Numero de série :</label>
-                <input type="text" name="NumeroDeSerie" required
-                minlength="4" maxlength="200" size="50" placeholder="Saisissez le numéro de série de votre multiprise">
-
-            <br/> <br/> <br/>
-
-            <label> Nom de la multiprise :</label>
-            <input type="text" name="NomMultiprise" required minlength="3" maxlength="20" size="50" placeholder="Entrez le nom de votre multiprise">
-
-            <br/> <br/> <br/>
-
-                <input type="submit" value="Envoyer" style="width:200px">
+            <input type="submit" value="Envoyer">
             </form>
-
-            
-
         </div>
-
-        
     </body>
-    <?php include("Footer.html"); ?>
+
+    <?php include("footer.html"); ?>
 </html>

@@ -5,24 +5,34 @@ font-family: Trebuchet MS;
 
 body{
   background: linear-gradient(#686f77,white);
+  background-repeat: no-repeat;
 }
 
 .AjouterMaison{
-  width: 40%;
-  margin:5%;
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;
   padding:3%;
-  margin-left: 350px;
-  padding-top:0px;
   border: solid #3e4866;
-  border-radius: 3vw ;
+  border-radius: 3em ;
   background-color: white;
   color: #3e4866;
 
 }
+input{
+  width: 100%;
+  font-size: 1.2em;
+  padding:8px;
+  margin: 10px;
+}
+input[type='submit']{
+  width: 40%;
+  margin-left:auto;
+  margin-right:auto;
+}
 
 label {
-    font-size: 1.2em;
     padding: 4px;
     display: block;
-    font: 1.5rem 'Trebuchet MS', sans-serif; color: black; font-weight: bold;
+    font: 1.5em 'Trebuchet MS', sans-serif; color: black; font-weight: bold;
 }
