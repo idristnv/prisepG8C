@@ -1,4 +1,4 @@
-<?php include("barre de navigation.html"); ?>
+<?php include("navigationBar.html"); ?>
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', 'root');
 
@@ -41,6 +41,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', 'root');
                         //===== Envoi du mail
                         mail($to, $objet, $contenu, $header);
                         $DB->insert("UPDATE utilisateur SET motDePasse = ? WHERE adresseMail = ?", array($new_pass, $_POST['mail']));
+                        header('Location: pageRegisterLogin.php');
         }
     }
 ?>

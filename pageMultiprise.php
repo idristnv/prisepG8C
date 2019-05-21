@@ -6,7 +6,7 @@ session_start();
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Multirpise</title>
+  <title>Multiprise</title>
   <link rel="stylesheet" href="stylesheet/pageMultiprise.css">
 
 </head>

@@ -25,7 +25,6 @@
         <h2>En cas de problème, qui contacter?</h2>
         <br>
         <p>Dans la barre de naivigation, cliquez sur "Besoin d'aide?", créez ensuite un ticket incident et renseignez votre problème. Un administrateur vous répondra dans les plus brefs délais.</p>
-
     </body>
     <?php include("Footer.html") ?>
 </html>

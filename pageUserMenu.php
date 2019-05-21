@@ -66,10 +66,8 @@ session_start(); // On démarre la session AVANT toute chose
       <a href="pageAddHome.php"><img src="stylesheet/ICON_PLUS.png" 
       alt="ajouter une maison" ></a>
       <p>
-        Si vous souhaitez ajouter une demeure, prevoyé
-        le nom, l'adresse et le nombre de pièce de celle-ci,
-        ensuite il vous suffit de cliquer sur le bouton "+" et
-        de remplir le formulaire. Vous serez automatiquement 
+        Pour ajouter une maison, cliquer sur le bouton "+" et
+        remplissez le formulaire. Vous serez automatiquement 
         redirigé vers cette page une fois l'enregistrement de la demeure terminé.
       </p>
     </div>
