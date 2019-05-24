@@ -1,6 +1,6 @@
 <?php include("navigationBar.html"); ?>
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', 'root');
+$bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
 
     if(!empty($_POST)){
         extract($_POST);
