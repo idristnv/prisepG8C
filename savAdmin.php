@@ -4,31 +4,14 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" href="stylesheet/pagesSAV.css">
     </head>
-    <style>
-    form
-    {
-        text-align:center;
-    }
-    h1 
-    {
-        text-align:center;
-    }
-    h2
-    {
-        text-align:center;
-    }
-    .divTicketex
-    {
-        display:block;
-        text-align:center;
-        margin:auto;
-    }
-    </style>
     <body>
-
-    <h2>Less tickets existants</h2>
-    <!-- <div style="background-color:grey"> -->
- 
+        <?php include("navigationBarSavAdmin.html");?>
+        <br>
+        <h1> Espace Administrateur </h1>
+        <br>
+        <br>
+        <h2>Voici le(s) ticket(s) existant(s) : </h2>
+        <br>
     <?php
 
     try
@@ -46,7 +29,9 @@
    
 while($donnTick = $listTicket->fetch() /*and $donntick['mailUser']=='valentinnajean@isep.fr'*/){     //a remplacer par $_SESSION[addresse mail]
     ?>
-    <div class="divTicketex">
+
+    <div class="divTicket">
+        
         <a href="savAdminMsg.php?ticket=<?php echo $donnTick['numTicket'] ?>" >Ticket numero <?php echo $donnTick['numTicket'] ?> de <?php echo $donnTick['mailUser'] ?></a>
         <!-- echo '<p>' . $donntick['numTicket']. '</p>';  METHOD GET-->
 
@@ -58,5 +43,19 @@ while($donnTick = $listTicket->fetch() /*and $donntick['mailUser']=='valentinnaj
 $listTicket->closeCursor();
 ?>
     <!-- </div> -->
+    <br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<?php include("Footer.html") ?>
 </body>
+
 </html>

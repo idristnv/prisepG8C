@@ -16,26 +16,42 @@ try{
   <link rel="stylesheet" href="stylesheet/pageAdminMenu.css">
 </head>
 <body>
-  <?php include(".html");?>
-  <div id="info">
-    <p>Le nombre d'utilisateur actuelle:<?php
+  <?php include("navigationBarAdmin.html");?>
+  <br>
+  <h1> Espace Administrateur </h1>
+
+
+<br>
+  <div class="info">
+    <h2> Informations générales</h2>
+    <br>
+    <p>Le nombre <strong>d'utilisateurs </strong> actuel est de : <?php
       $requeteSQL = $bddAPP->query('SELECT COUNT(DISTINCT adresseMail) AS userNb FROM utilisateur');
       echo($requeteSQL->fetch()["userNb"]);
       $requeteSQL->closeCursor();
     ?>
     </p>
-    <p>Le nombre de residence:<?php
+  
+    <p>Le nombre de <strong>maison(s)</strong> enregistrée(s) est de : <?php
       $requeteSQL2 = $bddAPP->query('SELECT COUNT( idResidence) AS info FROM maison');
       echo($requeteSQL2->fetch()["info"]);
       $requeteSQL2->closeCursor();
     ?>
-    <p>Le nombre de multiprise:<?php
+    <br>
+    <p>Le nombre de <strong>multiprise(s)</strong> enregistrée(s) est de : <?php
       $requeteSQL3 = $bddAPP->query('SELECT COUNT( idMultiprise) AS info FROM multiprise');
       echo($requeteSQL3->fetch()["info"]);
       $requeteSQL3->closeCursor();
     ?>
     </p>
   </div>
+
+  
+  
+
+  <br>
+  <br>
+  <br>
   <?php include("Footer.html") ?>
 </body>
 </html>
