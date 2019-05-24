@@ -11,7 +11,10 @@ session_start();
   </head>
 
 <body>
+
 <?php include("navigationBar.html");?>
+
+
 <div class="mdp">
 <h2>Changer de mot de passe</h2>
 <form action="changermotdepasse_post.php" method="post">
