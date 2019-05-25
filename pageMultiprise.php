@@ -85,9 +85,9 @@ if(ISSET($_GET['idPiece'])){
           ?>
          
           <?php 
-            if($donnee['capteurTemperature']<35){
+            if($donnee['capteurTemperature']<20){
               echo '<img src="stylesheet/image/iconTemperatureGreen" alt="temperature optimal">';
-            }elseif ($donnee['capteurTemperature']<70) {
+            }elseif ($donnee['capteurTemperature']<25) {
               echo '<img src="stylesheet/image/iconTemperatureOrange" alt="temperature élevé">';
             }else{
               echo '<img src="stylesheet/image/iconTemperatureRed" alt="temperature critique">';
