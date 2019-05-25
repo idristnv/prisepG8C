@@ -33,7 +33,13 @@ if($_GET["button"]=="turnOff"){
   }
 
 }else if($_GET["button"]=="alert"){
-  echo 'nike ta mere';
+  if($donnee['alertNotification']){
+    $req = $bddAPP->query('UPDATE multiprise
+      SET alertNotification=0 WHERE idMultiprise='.$_GET["idMultiprise"]);
+  }else{
+    $req = $bddAPP->query('UPDATE multiprise
+      SET alertNotification=1 WHERE idMultiprise='.$_GET["idMultiprise"]);
+  }
 }
 
 $req->closeCursor();

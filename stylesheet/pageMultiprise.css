@@ -15,19 +15,20 @@ h1{
   background: linear-gradient(#686f77,white);
   color: #606164;
   /*background-image: linear-gradient(to left top ,orange,blue) ;*/
-  
   padding:15px;
 }
 
 .divMultiprise{
-  width: 46%;
-  margin: 2%;
+  width: 30%;
+  margin: 1%;
   margin-top:10px;
   border: 3px solid #3e4866;
   border-radius: 30px;
   background-color: white;
   padding: 0px; /* pour les background coloré*/
   overflow: hidden;
+  display: inline-block;
+
 }
 .nomMultiprise{
   width: 100%;
@@ -68,9 +69,13 @@ h1{
   padding: 0px;
   margin: 0px;
 }
+button{
+  background: none;
+  border:none;
+}
 
 .divPlug {
-  width: 30%;
+  width: 25%;
   text-align: center;
   height: auto;
   margin: auto;

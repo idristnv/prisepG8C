@@ -1,9 +1,9 @@
 <?php
-  session_start();
-  $_SESSION['emailExistant']=false;
-  $_SESSION['inscriptionValider']=false;
+session_start();
+$_SESSION['emailExistant']=false;
+$_SESSION['inscriptionValider']=false;
 
-  // Connexion à la base de données
+// Connexion à la base de données
 try{
   $bdd = new PDO('mysql:host=localhost;dbname=APP;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
   $req = $bdd->query('SELECT * from utilisateur');

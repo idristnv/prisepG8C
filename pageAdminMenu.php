@@ -19,8 +19,6 @@ try{
   <?php include("navigationBarAdmin.html");?>
   <br> <br>
   <h1> Espace Administrateur </h1>
-
-
 <br>
 <br>
 <br>

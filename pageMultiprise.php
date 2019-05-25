@@ -43,7 +43,7 @@ if(ISSET($_GET['idPiece'])){
     ?>
     <div id="divMaisonPiece">
       <br>
-      <h1><?=$donnee['nomResidence'].'<br>'.$donnee['nomPiece']?></h2>
+      <h1><?=$donnee['nomResidence'].':'.$donnee['nomPiece']?></h2>
     </div>
    <br><br>
     <?php
@@ -100,15 +100,16 @@ if(ISSET($_GET['idPiece'])){
             for($i=1;$i<=3;$i++){
             ?>
             <div class="divPlug">
-              <p>prise <?=$i ?> </p>
+              <p>Prise <?=$i ?> </p>
               <button onclick="window.location.href='pageButton.php?button=alert<?=$i?>&idMultiprise=<?=$donnee['idMultiprise']?>'">
-              <img src=
-                <?php if($donnee['plug'.$i.'State']){
-                  echo '"stylesheet/image/iconOn.png"';
-                }else{
-                  echo '"stylesheet/image/iconOff.png"';
-                }
-                ?>
+                <img src=
+                  <?php if($donnee['plug'.$i.'State']){
+                    echo '"stylesheet/image/iconOn.png"';
+                  }else{
+                    echo '"stylesheet/image/iconOff.png"';
+                  }
+                  ?>
+                >
               </button>
             </div>
             <?php 

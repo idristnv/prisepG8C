@@ -3,7 +3,7 @@ font-family: Trebuchet MS;
 }
 .navbar {
   overflow: hidden;
-  background-color: #3e4866;
+  background:linear-gradient(to right,black,#1764c6,#406ca5);
   margin: 0;
   padding: 0;
   list-style-type: none;
