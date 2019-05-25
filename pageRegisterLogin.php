@@ -73,8 +73,9 @@ session_start();
         </form>
         <?php if (ISSET($_SESSION['inscriptionValider'])) {
             if($_SESSION['inscriptionValider']){
-            echo '<script type="text/javascript">alert("Vous etes inscrit!");
-                  </script>';
+            echo "<p>Une personne est deja inscrit sur cet ordinateur</p>"
+            // '<script type="text/javascript">alert("Vous etes inscrit!");</script>'
+            ;
             }
           }
         ?>
