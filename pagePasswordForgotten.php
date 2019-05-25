@@ -94,10 +94,6 @@ $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
 
     <?php include("Footer.html") ?>

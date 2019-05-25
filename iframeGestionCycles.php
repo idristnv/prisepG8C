@@ -19,7 +19,6 @@
 <br/>
 <br/>
 
-
 <tr>
 <td width="20%"> <input type="checkbox" name="Lundi" > <label>Lundi </label>
 <br/> <br/><input type="checkbox" name="Mardi" > <label>Mardi </label>
@@ -50,9 +49,9 @@ width="20%"> <input type="checkbox" name="Copie cycle jour" >  <label>Copier ce 
 
 
 <td width="5%"> DEBUT </td>
-<td width="20%"></td>
+<td width="20%"> <img src="stylesheet/image/horloge2.png" class="clock2"> </td>
 <td width="5%">  FIN </td>
-<td width="20%"></td>
+<td width="20%"> <img src="stylesheet/image/horloge1.png" class="clock2"></td>
 
 </tr>
 </table>
