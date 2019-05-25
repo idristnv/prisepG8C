@@ -1,5 +1,12 @@
 <?php
 session_start();
+if(ISSET($_GET['idResidence'])){
+  $_SESSION['idResidence']=$_GET['idResidence'];
+}
+if(ISSET($_GET['idPiece'])){
+  $_SESSION['idPiece']=$_GET['idPiece'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -20,16 +27,19 @@ session_start();
       die('error:'.$e->getMessage());
     }
     $requeteSQL = $bddAPP->query(
-      'SELECT mu.*, p.nomPiece, m.nomResidence
+      'SELECT mu.*, p.*, m.*
       FROM multiprise mu
       RIGHT JOIN piece p ON p.idPiece = mu.idpiece
       RIGHT JOIN maison m ON p.idResidence = m.idResidence
       WHERE m.adresseMail="'.$_SESSION['adresseMail'].'" 
-      AND m.idResidence="'.$_GET['idResidence'].'" 
-      AND p.idPiece="'.$_GET['idPiece'].'"'
+      AND m.idResidence="'.$_SESSION['idResidence'].'" 
+      AND p.idPiece="'.$_SESSION['idPiece'].'"'
       );
       
     $donnee = $requeteSQL->fetch();
+    $idResidence=$donnee['idResidence'];
+    $idPiece=$donnee['idPiece'];
+
     ?>
     <div id="divMaisonPiece">
       <h1><?=$donnee['nomResidence'].'<br>'.$donnee['nomPiece']?></h2>
@@ -42,14 +52,33 @@ session_start();
         <!-- ce qu'on affiche de la multiprise -->
         <h2 class="nomMultiprise"><?=$donnee['nomMultiprise'] ?></h2>
         <div class="divIcones">
-          <button ><img src="stylesheet/image/iconOn" alt="icone On/Off"></button>
+
+          <button onclick="window.location.href='pageButton.php?button=turnOff&idMultiprise=<?=$donnee['idMultiprise']?>'">
+          <img src='stylesheet/image/icon<?php if($donnee['state']){
+            echo 'On';
+          }else{
+            echo 'Off';
+          }?>.png'
+          alt="icone On/Off"></button>
+          
           <!-- changer celui la pour les alertes -->
-          <button><?php echo '<img src="stylesheet/image/iconAlertOn" alt="notification activé">'; ?></button>
-          <p>Allumé depuis: <?= $donnee['switchedOnAt'] ?></p> <!--date("G:i:s")-->
+          <button  onclick="window.location.href='pageButton.php?button=alert&idMultiprise=<?=$donnee['idMultiprise']?>'">
+          <img src='stylesheet/image/iconAlert<?php if($donnee['alertNotification']){
+            echo 'On';
+          }else{
+            echo 'Off';
+          }?>.png'
+          alt="alert On/Off">
+          
+          </button>
+
+          
+         <!-- <p>Allumé depuis: <?= $donnee['switchedOnAt'] ?></p> date("G:i:s")-->
+          
           <?php 
             if($donnee['capteurLuminosite']){
               echo '<img src="stylesheet/image/iconLightOn" alt="lumière détecté">';
-            }else {
+            }else{
               echo '<img src="stylesheet/image/iconLightOff" alt="lumière non détecté">';
             }
           ?>
@@ -71,7 +100,15 @@ session_start();
             ?>
             <div class="divPlug">
               <p>prise <?=$i ?> </p>
-              <a href=""> <img <?= "src='stylesheet/image/iconOn'" ?> > </a>
+              <button onclick="window.location.href='pageButton.php?button=alert<?=$i?>&idMultiprise=<?=$donnee['idMultiprise']?>'">
+              <img src=
+                <?php if($donnee['plug'.$i.'State']){
+                  echo '"stylesheet/image/iconOn.png"';
+                }else{
+                  echo '"stylesheet/image/iconOff.png"';
+                }
+                ?>
+              </button>
             </div>
             <?php 
             }

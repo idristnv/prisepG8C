@@ -10,16 +10,15 @@
         <?php include("navigationBar.html"); ?>
         <h1>Ajoutez votre multiprise</h1>
         <div class="AjouterMaison">
-            <form action="validation/pageAddHome_validation.php" method="post">
+            <form action="validation/pageAddMultiprise_validation.php" method="post">
+                <label>Numero de série :</label>
+                <input type="text" name="idMultiprise" required
+                minlength="8" placeholder="Saisissez le numéro de série de votre multiprise">
 
-            <label>Numero de série :</label>
-            <input type="text" name="idMultiprise" required
-            minlength="8" placeholder="Saisissez le numéro de série de votre multiprise">
+                <label>Nom pour la multiprise :</label>
+                <input type="text" name="nomMultiprise" required minlength="3" placeholder="Entrez le nom de votre multiprise">
 
-            <label>Nom pour la multiprise :</label>
-            <input type="text" name="nomMultiprise" required minlength="3" placeholder="Entrez le nom de votre multiprise">
-
-            <input type="submit" value="Envoyer">
+                <input type="submit" value="Envoyer">
             </form>
         </div>
     </body>
