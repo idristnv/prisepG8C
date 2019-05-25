@@ -6,7 +6,7 @@ $_SESSION['motDePasseCorrect']=false;
 // Connexion à la base de données
 try{
   $bdd = new PDO('mysql:host=localhost;dbname=APP;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-  $req = $bdd->query('SELECT adresseMail,motDePasse from utilisateur');
+  $req = $bdd->query('SELECT * from utilisateur');
 
   //on regarde si l'addresse mail est deja enregistré
   while ($donnee = $req->fetch()){
@@ -17,17 +17,24 @@ try{
         //crée des variables pour plus tard
         $_SESSION['adresseMail']=$donnee['adresseMail'];
         $_SESSION['prenom']=$donnee['prenom'];
+        $role=$donnee['role'];
       }
     }
   }
-  $req->closeCursor();
 
 }catch(Exception $e){
   die('Erreur : '.$e->getMessage());
 }
 // Redirection du visiteur vers la page d'inscription
 if($_SESSION['emailNonExistant'] AND $_SESSION['motDePasseCorrect']){
-  header('Location: ../pageUserMenu.php');
+  if($role=='administrateur'){
+    header('Location: ../pageAdminMenu.php');
+  }else if($role=='client') {
+    header('Location: ../pageUserMenu.php');
+  }
+  
 }else{
   header('Location: ../pageRegisterLogin.php');
 }
+$req->closeCursor();
+
