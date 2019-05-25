@@ -17,72 +17,24 @@ h1{
   padding:5px;
   text-align: center;
 }
-/* .divMultiprise{
-  width: 46%;
-  margin: 2%;
-  margin-top:10px;
-  border: 3px solid #3e4866;
-  border-radius: 30px;
-  background-color: white;
-  padding: 0px; 
-  overflow: hidden;
+
+h2 {
+text-decoration: underline;
+text-align: center;
 }
-.nomMultiprise{
-  width: 100%;
-  padding: 15px;
-  margin-top:0px;
-  margin-bottom: 0px;
+
+.divTicket {
+
+  width: 25%;
+  margin:1%;
+  padding:1%;
+  margin-left: 550px;
+  padding-top:0px;
+  border: solid #3e4866;
+  border-radius: 3vw ;
+  background-color: white;
+  color: #3e4866;
   text-align: center;
-  font-size: 2.5em;
-  background: linear-gradient(to right,#406ca5,#1764c6,black);
-  color: black;
-  border-bottom: 3px solid #3e4866;
-}
-.divIcones{
-  border-bottom: 3px solid #3e4866;
-  display: flex;
-  flex-wrap: wrap;
+
 }
 
-.divIcones *{
-  width: 80px;
-  height: 80px;
-  padding: 5px;
-  margin: 5px;
-  border: 3px solid #3e4866;
-  border-radius: 10px;
-  align-content: center;
-  margin-left: 15px;
-}
-.divIcones button {
-  width: 96px;
-  height: 96px;
-}
-.divIcones button img{
-  border: none;
-  padding: 0px;
-  margin: 0px;
-}
-
-
-#divAjoutMultiprise{
-  width: 80%;
-  margin: 10%;
-  margin-top:10px;
-  margin-bottom:10px;
-  border: 3px solid #3e4866;
-  background-color: white;
-  border-radius: 20px;
-  font-size: 2vw;
-}
-#divAjoutMultiprise img{
-  float:left;
-  width: 15%;
-}
-
-@media screen and (max-width: 1100px) {
-  .divMultiprise{
-    width: 96%;
-    margin: 2%;
-  }
-} */

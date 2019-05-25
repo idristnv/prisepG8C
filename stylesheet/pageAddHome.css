@@ -6,13 +6,14 @@ font-family: Trebuchet MS;
 
 body{
   background: linear-gradient(#686f77,white);
+  background-repeat:no-repeat;
 }
 
 .AjouterMaison{
   width: 40%;
   margin:5%;
   padding:3%;
-  margin-left: 350px;
+  margin-left: 400px;
   padding-top:0px;
   border: solid #3e4866;
   border-radius: 3vw ;
@@ -28,3 +29,6 @@ label {
     font: 1.5rem 'Trebuchet MS', sans-serif; color: black; font-weight: bold;
 }
 
+.AjouterMaison h1 {
+  text-align: center;
+}

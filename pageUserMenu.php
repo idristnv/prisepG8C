@@ -12,9 +12,9 @@ session_start();
 <body>
 
   <?php include("navigationBar.html");?>
-
+<br>
   <h1>Vos demeures</h1>
-
+<br><br>
   <div class="divFlexDisplay"> <!--pour le responsive -->
     <?php
     try{
@@ -66,14 +66,14 @@ session_start();
       <a href="pageAddHome.php"><img src="stylesheet/ICON_PLUS.png" 
       alt="ajouter une maison" ></a>
       <p>
-        Pour ajouter une maison, cliquer sur le bouton "+" et
+        Si vous souhaitez ajouter une maison, cliquez sur le bouton "+" et
         remplissez le formulaire. Vous serez automatiquement 
         redirigé vers cette page une fois l'enregistrement de la demeure terminé.
       </p>
     </div>
   </div>
 
-
+<br><br><br><br><br><br><br><br><br><br><br>
 </body>
 <?php include("footer.html") ?>
 </html>

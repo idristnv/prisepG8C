@@ -1,44 +1,30 @@
-
-* {
-font-family: Trebuchet MS;
-}
-
 body{
   background: linear-gradient(#686f77,white);
-  background-repeat: no-repeat;
+  background-repeat:no-repeat;
 }
 
-.AjouterMaison{
-  width: 80%;
-  margin-left:auto;
-  margin-right:auto;
+
+.info{
+  width: 40%;
+  height: 70%
+  margin:5%;
   padding:3%;
+  margin-left: 400px;
+  padding-top:0px;
   border: solid #3e4866;
-  border-radius: 3em ;
+  border-radius: 3vw ;
   background-color: white;
   color: #3e4866;
 
 }
-input{
-  width: 100%;
-  font-size: 1.2em;
-  padding:8px;
-  margin: 10px;
-}
-input[type='submit']{
-  width: 40%;
-  margin-left:auto;
-  margin-right:auto;
+
+.titre{
+text-align: center;
+font-size: 18px;
 }
 
-label {
-    padding: 4px;
-    display: block;
-    font: 1.5em 'Trebuchet MS', sans-serif; color: black; font-weight: bold;
-}
-
-h1{
-    width: 40%;
+h1 {
+width: 40%;
     margin-top: 1vw;
     margin-bottom: 0px;
     margin-left:  30%;
@@ -50,4 +36,8 @@ h1{
     color: #606164;
     padding:5px;
     text-align: center;
+}
+
+.info h2{
+text-align: center;
 }

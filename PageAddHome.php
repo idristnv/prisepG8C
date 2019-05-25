@@ -10,7 +10,7 @@
         <?php include("navigationBar.html"); ?>
 
 
-        <br/> <br/> <br/>
+        
 
         <div class="AjouterMaison">
             <h1> Ajouter votre domicile</h1>
@@ -44,7 +44,7 @@
 
 
             <br/> <br/> <br/>
-                <input type="submit" value="Envoyer" style="width:200px">
+                <input style="font-size:1.2vw; border-radius: 3vw; padding: 0.5vw 1vw; border: 0.15vw solid #3E4866; margin-left: 42%;" type="submit" value="Envoyer" />
             </form>
 
             

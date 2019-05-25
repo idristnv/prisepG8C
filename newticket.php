@@ -28,8 +28,9 @@
     </style>
     <body>
     <?php include("navigationBar.html");?>
+    <br>
     <h1>
-    Besoin d'aide?
+    Service Client
     </h1>
 
     <p style="text-align: center; font-size: 1.5vw">
@@ -45,7 +46,7 @@
         <!-- <label for="pseudo">Pseudo</label> : <input type="text" name="adresseMail" id="pseudo" /><br /> -->
         <!-- <label for="message">Message</label> :  <input type="text" name="texte" id="message" /><br /> -->
 
-        <input type="submit" name="bouton ticket" style="font-size:1.5vw; border-radius: 3vw; padding: 0.5vw 1vw; border: 0.15vw solid #3E4866;" value="Creer un ticket"/>
+        <input type="submit" name="bouton ticket" style="font-size:1.5vw; border-radius: 3vw; padding: 0.5vw 1vw; border: 0.15vw solid #3E4866;" value="Créer un ticket"/>
 
 	</p>
     </form>
@@ -85,7 +86,7 @@ $listTicket->closeCursor();
 ?>
     <!-- </div> -->
 </body>
-
+<br><br><br><br><br><br><br><br><br><br>
 <?php include("Footer.html");?>
 </html>
 

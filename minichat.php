@@ -3,24 +3,21 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Mini-chat</title>
-        <link rel="stylesheet" href="stylesheet/pagesSAV.css">
+        <title>Service client</title>
+        <link rel="stylesheet" href="stylesheet/minichat.css">
     </head>
-    <style>
-    form
-    {
-        text-align:center;
-    }
-    </style>
+  
     <body>
     <?php include("navigationBar.html");?>
-
+<br>
+    <h1> Contact avec le support </h1>
+<br>
 
     <form action="minichat_post.php?ticket=<?php $_GET['ticket'] ?>" method="post">
         <p>
-        <label for="message" style="font-size:1.5vw;">Message</label> :  <input style="height:40px; width:80%" type="text" name="texte" id="message" /><br />
+        <label for="message" style="font-size:1.5vw; margin-left: 5%">Message </label> :  <input style="height:40px; width:80%; margin-left: 3%" type="text" name="texte" id="message" /><br />
         <input type="hidden" name="numTicketURL" value="<?php echo $_GET['ticket'] ?>" />
-        <input style="font-size:1.5vw; border-radius: 3vw; padding: 0.5vw 1vw; border: 0.15vw solid #3E4866; margin-left: 80%; margin-top: 0.5vw;" type="submit" value="Envoyer" />
+        <input style="font-size:1.5vw; border-radius: 3vw; padding: 0.5vw 1vw; border: 0.15vw solid #3E4866; margin-left: 47%; margin-top: 0.5vw;" type="submit" value="Envoyer" />
 	</p>
     </form>
 
@@ -47,10 +44,10 @@ while ($donnees = $reponse->fetch()){
     if ($donnees['numTicket'] == $_GET["ticket"])
 {
         if ($donnees['adresseMail'] == 'Administrateur Prisep'){
-	    echo '<p style="color:#FF0000";><strong>' . $donnees['adresseMail'] . '</strong> : ' . $donnees['texte'] . '</p>';
+	    echo '<p class="container";><strong>' . $donnees['adresseMail'] . '</strong> : ' . $donnees['texte'] . '</p>';
         }
         else{
-            echo '<p><strong>' . $donnees['adresseMail'] . '</strong> : ' . $donnees['texte'] . '</p>';
+            echo '<p class="test"><strong>' . $donnees['adresseMail'] . '</strong> : ' . $donnees['texte'] . '</p>';
         }
 }
 }
@@ -63,5 +60,6 @@ $reponse->closeCursor();
     </p>
     </form> -->
     </body>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <?php include("Footer.html");?>
 </html>

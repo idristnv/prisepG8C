@@ -1,6 +1,9 @@
+
 * {
 font-family: Trebuchet MS;
 }
+
+
 .navbar {
   overflow: hidden;
   background-color: #3e4866;
@@ -10,7 +13,7 @@ font-family: Trebuchet MS;
   border-radius: 20px 60px 20px 60px;
   border: 2px solid black;
 
-} 
+}
 
 .navbar p{
   font-size: 16px;
@@ -49,94 +52,9 @@ background-color: #456C92;
 }
 
 
-.ContenuBtnMonCompte {
-  display: none;
-  position: absolute;
-  background-color: #456C92;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  width: 5px;
-  border-radius: 0px 10px 10px 10px
-}
-
-.ContenuBtnUtilisateurs{
-  display: none;
-  position: absolute;
-  background-color: #456C92;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 0px 0px 10px 10px;
-  width: 175px;
-
-}
-
-.ContenuBtnMaisons {
-  display: none;
-  position: absolute;
-  background-color: #456C92;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 0px 0px 10px 10px;
-  width: 107px;
-
-}
-
-.Deroulement:hover .ContenuBtnMonCompte {
-  display: block;
-}
-
-.Deroulement:hover .ContenuBtnUtilisateurs {
-  display: block;
-} 
-
-.Deroulement:hover .ContenuBtnMaisons {
-  display: block;
-} 
-
-.ContenuBtnMonCompte a {
-  float: none;
-  color: white;
-  padding:  16px;
-  display: block;
-  text-align: center;
-}
-
-.ContenuBtnMonCompte a:hover {
-background-color: grey;
-}
-
-.ContenuBtnUtilisateurs a { 
-  float: none;
-  color: white;
-  padding:  16px;
-  display: block;
-  text-align: center;
-
-}
-
-.ContenuBtnMaisons a { 
-  float: none;
-  color: white;
-  padding:  16px;
-  display: block;
-  text-align: center;
-
-}
-
-.ContenuBtnUtilisateurs a:hover {  
-background-color: grey;
- }
-
-.ContenuBtnMaisons a:hover {  
-background-color: grey;
- }
-
 #logoPrisep{
   position: absolute;
   float: left;
   width:6em;
   top:1.4%;
 }
-
-    

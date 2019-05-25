@@ -13,7 +13,7 @@ if(ISSET($_GET['idPiece'])){
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Multiprise</title>
+  <title>Gestion Multiprise</title>
   <link rel="stylesheet" href="stylesheet/pageMultiprise.css">
 
 </head>
@@ -42,9 +42,10 @@ if(ISSET($_GET['idPiece'])){
 
     ?>
     <div id="divMaisonPiece">
+      <br>
       <h1><?=$donnee['nomResidence'].'<br>'.$donnee['nomPiece']?></h2>
     </div>
-   
+   <br><br>
     <?php
     while($donnee){
     ?>
@@ -52,7 +53,6 @@ if(ISSET($_GET['idPiece'])){
         <!-- ce qu'on affiche de la multiprise -->
         <h2 class="nomMultiprise"><?=$donnee['nomMultiprise'] ?></h2>
         <div class="divIcones">
-
           <button onclick="window.location.href='pageButton.php?button=turnOff&idMultiprise=<?=$donnee['idMultiprise']?>'">
           <img src='stylesheet/image/icon<?php if($donnee['state']){
             echo 'On';
@@ -75,6 +75,7 @@ if(ISSET($_GET['idPiece'])){
           
          <!-- <p>Allumé depuis: <?= $donnee['switchedOnAt'] ?></p> date("G:i:s")-->
           
+
           <?php 
             if($donnee['capteurLuminosite']){
               echo '<img src="stylesheet/image/iconLightOn" alt="lumière détecté">';
@@ -126,15 +127,17 @@ if(ISSET($_GET['idPiece'])){
       <a href="pageAddMultiprise.php"><img src="stylesheet/ICON_PLUS.png" 
       alt="ajouter une multiprise" ></a>
       <p>
-        Si vous souhaitez ajouter une multiprise, relevez le numéro de serie
-        en dessous de la multiprise et prévoyez un nom à celle-ci, ensuite 
-        il vous suffit de cliquer sur le bouton "+" et de remplir le formulaire. 
+        Si vous souhaitez ajouter une multiprise, cliquez sur le bouton "+" et remplissez le formulaire. 
+        Pensez à relever le numéro de serie de votre multiprise. 
         Vous serez automatiquement redirigé vers cette page une fois 
         l'enregistrement de la multiprise terminé.
       </p>
     </div>
   </div>
-   
+ 
+
+
+
 </body>
 <?php include("Footer.html") ?>
 </html>

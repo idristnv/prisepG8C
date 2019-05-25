@@ -34,6 +34,7 @@ session_start();
 <input type="submit" style="font-size:1.5vw; border-radius: 3vw; padding: 0.5vw 1vw; border: 0.15vw solid #3E4866; width: 25%; margin-left: 37.5%;" value="Changer">
 </form>
 </div>
+<br><br><br><br>
 </body>
 <?php include("Footer.html");?>
 </html>
