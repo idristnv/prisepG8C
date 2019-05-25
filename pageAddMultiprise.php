@@ -8,7 +8,11 @@
     </head>
     <body>
         <?php include("navigationBar.html"); ?>
-        <h1>Ajoutez votre multiprise</h1>
+        <br><br>
+        <h1>Ajoutez une multiprise</h1>
+        <br>
+        <br>
+        <br>
         <div class="AjouterMaison">
             <form action="validation/pageAddHome_validation.php" method="post">
 
@@ -23,6 +27,6 @@
             </form>
         </div>
     </body>
-
+<br><br><br>
     <?php include("footer.html"); ?>
 </html>

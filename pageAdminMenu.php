@@ -17,15 +17,18 @@ try{
 </head>
 <body>
   <?php include("navigationBarAdmin.html");?>
-  <br>
+  <br> <br>
   <h1> Espace Administrateur </h1>
 
 
 <br>
+<br>
+<br>
+<br>
   <div class="info">
     <h2> Informations générales</h2>
     <br>
-    <p>Le nombre <strong>d'utilisateurs </strong> actuel est de : <?php
+    <p>Le nombre <strong>d'utilisateur(s) </strong> actuel est de : <?php
       $requeteSQL = $bddAPP->query('SELECT COUNT(DISTINCT adresseMail) AS userNb FROM utilisateur');
       echo($requeteSQL->fetch()["userNb"]);
       $requeteSQL->closeCursor();
@@ -46,7 +49,7 @@ try{
     </p>
   </div>
 
-  
+  <br><br><br><br>
   
 
   <br>

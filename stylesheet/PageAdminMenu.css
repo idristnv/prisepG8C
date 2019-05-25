@@ -6,6 +6,7 @@ body{
 
 .info{
   width: 40%;
+  height: 70%
   margin:5%;
   padding:3%;
   margin-left: 400px;
@@ -39,5 +40,4 @@ width: 40%;
 
 .info h2{
 text-align: center;
-text-decoration: underline;
 }

@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="stylesheet/pageGCU.css">
     </head>
     <body>
+        
         <h1>Conditions générales d'utilisation</h1>
         <div>
         <br><br>

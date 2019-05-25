@@ -2,6 +2,8 @@
 <?php
 $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
 
+
+
     if(!empty($_POST)){
         extract($_POST);
         $valid = true;
@@ -55,7 +57,8 @@ $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
         <title>Mot de passe oublié</title>
     </head>
     <body>
-        
+        <br>
+        <h1> Récupération du mot de passe </h1>
 
         <br>
         <br>
@@ -71,7 +74,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
             <?php
                 }
             ?>
-            <input type="email" placeholder="Adresse mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }?>" required>
+            <input style="width:15%; margin-left: 40%" type="email" placeholder="Renseignez votre adresse-mail" name="mail" value="<?php if(isset($mail)){ echo $mail; }?>" required>
             <button type="submit" name="oublie">Envoyer</button>
         </form>
     </body>

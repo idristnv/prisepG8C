@@ -6,7 +6,7 @@
     </head>
     <body>
         <?php include("navigationBarSavAdmin.html");?>
-        <br>
+        <br> <br>
         <h1> Espace Administrateur </h1>
         <br>
         <br>

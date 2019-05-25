@@ -6,7 +6,7 @@ session_start();
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Multiprise</title>
+  <title>Gestion Multiprise</title>
   <link rel="stylesheet" href="stylesheet/pageMultiprise.css">
 
 </head>
@@ -32,9 +32,10 @@ session_start();
     $donnee = $requeteSQL->fetch();
     ?>
     <div id="divMaisonPiece">
+      <br>
       <h1><?=$donnee['nomResidence'].'<br>'.$donnee['nomPiece']?></h2>
     </div>
-   
+   <br><br>
     <?php
     while($donnee){
     ?>
@@ -42,10 +43,10 @@ session_start();
         <!-- ce qu'on affiche de la multiprise -->
         <h2 class="nomMultiprise"><?=$donnee['nomMultiprise'] ?></h2>
         <div class="divIcones">
-          <button ><img src="stylesheet/image/iconOn" alt="icone On/Off"></button>
+          <button id="BoutonOn"  ><img src="stylesheet/image/iconOn" alt="icone On/Off"> </button>
           <!-- changer celui la pour les alertes -->
           <button><?php echo '<img src="stylesheet/image/iconAlertOn" alt="notification activé">'; ?></button>
-          <p>Allumé depuis: <?= $donnee['switchedOnAt'] ?></p> <!--date("G:i:s")-->
+          <p id="Minuteur">Allumé depuis: <?= $donnee['switchedOnAt'] ?></p> <!--date("G:i:s")-->
           <?php 
             if($donnee['capteurLuminosite']){
               echo '<img src="stylesheet/image/iconLightOn" alt="lumière détecté">';
@@ -89,15 +90,17 @@ session_start();
       <a href="pageAddMultiprise.php"><img src="stylesheet/ICON_PLUS.png" 
       alt="ajouter une multiprise" ></a>
       <p>
-        Si vous souhaitez ajouter une multiprise, relevez le numéro de serie
-        en dessous de la multiprise et prévoyez un nom à celle-ci, ensuite 
-        il vous suffit de cliquer sur le bouton "+" et de remplir le formulaire. 
+        Si vous souhaitez ajouter une multiprise, cliquez sur le bouton "+" et remplissez le formulaire. 
+        Pensez à relever le numéro de serie de votre multiprise. 
         Vous serez automatiquement redirigé vers cette page une fois 
         l'enregistrement de la multiprise terminé.
       </p>
     </div>
   </div>
-   
+ 
+
+
+
 </body>
 <?php include("Footer.html") ?>
 </html>
