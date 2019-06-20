@@ -92,6 +92,7 @@ if(ISSET($_GET['idPiece'])){
             }else{
               echo '<img src="stylesheet/image/iconTemperatureRed" alt="temperature critique">';
             }
+            echo 'Température: '.$donnee['capteurTemperature'].'°C';
           ?>
         </div> 
             

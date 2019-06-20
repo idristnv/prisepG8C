@@ -1,7 +1,51 @@
 <?php
 session_start();
-?>
 
+echo '<a href="http://projets-tomcat.isep.fr:8080/clientVaadin/">link site pour voir les trames</a>';
+
+$ch = curl_init();
+curl_setopt($ch,CURLOPT_URL,'http://projets-tomcat.isep.fr:8080/appService/?ACTION=GETLOG&TEAM=008C');//attention" e/?A" pas "e?A" 
+curl_setopt($ch, CURLOPT_HEADER, false);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+$data = curl_exec($ch);
+curl_close($ch);/*
+echo "Raw Data:<br />";
+echo("$data");
+*/
+
+/*
+$data = file_get_contents('http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=0G8E');
+echo $data;
+*/
+
+$data_tab = str_split($data,33);
+echo "Tabular Data:<br />";
+$size=count($data_tab);
+$debutBoucle = $size-4;
+for($i=$debutBoucle; $i<$size; $i++){
+  //echo "Trame $i: $data_tab[$i]<br />"; //code de base qui affiche la trame
+  //la suite du code c'est moi qui l'ai ajouté 
+  $trame = $data_tab[$i];
+  echo $trame."<br/> ";
+  $nomCapteur = substr($trame,14,3);
+  $valCapteur = substr($trame,12,1);
+  echo 'Capteur:'.$nomCapteur."/état:".hexdec( $valCapteur).'<br/>';
+
+}
+
+
+
+$trame = $data_tab[1];
+// décodage avec des substring
+$t = substr($trame,0,1);
+$o = substr($trame,1,4);
+// …
+// décodage avec sscanf
+list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) = sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
+//echo("<br />$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
+echo("<br />$v,$a,$x,$year,$month,$day,$hour,$min,$sec<br />");
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
